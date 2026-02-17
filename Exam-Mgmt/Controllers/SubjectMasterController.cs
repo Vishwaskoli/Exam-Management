@@ -7,6 +7,11 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class SubjectMasterController : ControllerBase
     {
-
+        private readonly IConfiguration _configuration;
+        public SubjectMasterController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+        [HttpGet]
     }
 }
