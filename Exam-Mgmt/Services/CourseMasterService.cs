@@ -6,11 +6,11 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace Exam_Mgmt.Services
 {
-    public class CourseMasterService
+    public class CourseMasterService : ICourseMasterService
     {
         private readonly string cs;
-        public CourseMasterService(IConfiguration config) 
-        { 
+        public CourseMasterService(IConfiguration config)
+        {
             cs = config.GetConnectionString("DefaultConnection");
         }
 
@@ -50,13 +50,14 @@ namespace Exam_Mgmt.Services
             }
         }
 
-        internal async Task<int> CreateCourseAsync(Course c1)
+        public async Task<int> CreateCourseAsync(Course c1)
         {
-            using (SqlConnection cn = new SqlConnection(cs)) {
+            using (SqlConnection cn = new SqlConnection(cs))
+            {
                 await cn.OpenAsync();
-                using (SqlCommand cmd = new SqlCommand("sp_Course_Master",cn))
+                using (SqlCommand cmd = new SqlCommand("sp_Course_Master", cn))
                 {
-                    
+
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@mode", SqlDbType.VarChar, 50).Value = "create";
                     cmd.Parameters.Add("@CourseName", SqlDbType.VarChar, 50).Value = c1.Course_Name;
@@ -67,15 +68,15 @@ namespace Exam_Mgmt.Services
                     return i;
                 }
             }
-            
+
         }
 
-        internal async Task<int> DeleteCourseAsync(int id)
+        public async Task<int> DeleteCourseAsync(int id)
         {
-            using(SqlConnection sc = new SqlConnection(cs))
+            using (SqlConnection sc = new SqlConnection(cs))
             {
                 await sc.OpenAsync();
-                using(SqlCommand cmd = new SqlCommand("sp_Course_Master", sc))
+                using (SqlCommand cmd = new SqlCommand("sp_Course_Master", sc))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@mode", SqlDbType.VarChar, 50).Value = "deletebyid";
@@ -88,20 +89,20 @@ namespace Exam_Mgmt.Services
             }
         }
 
-        internal async Task<List<Course>> GetActiveCourseAsync()
+        public async Task<List<Course>> GetActiveCourseAsync()
         {
             var Courses = new List<Course>();
-            using(SqlConnection sc = new SqlConnection(cs))
+            using (SqlConnection sc = new SqlConnection(cs))
             {
                 await sc.OpenAsync();
-                using(SqlCommand cmd = new SqlCommand("sp_Course_Master", sc))
+                using (SqlCommand cmd = new SqlCommand("sp_Course_Master", sc))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@mode", SqlDbType.VarChar, 50).Value = "view";
 
-                    using(SqlDataReader rd = cmd.ExecuteReader())
+                    using (SqlDataReader rd = cmd.ExecuteReader())
                     {
-                        while(await rd.ReadAsync())
+                        while (await rd.ReadAsync())
                         {
                             Courses.Add(new Course
                             {
@@ -120,12 +121,12 @@ namespace Exam_Mgmt.Services
             }
         }
 
-        internal async Task<int> UpdateCourseAsync(int id, Course c)
+        public async Task<int> UpdateCourseAsync(int id, Course c)
         {
-            using(SqlConnection sc = new SqlConnection(cs))
+            using (SqlConnection sc = new SqlConnection(cs))
             {
                 await sc.OpenAsync();
-                using(SqlCommand cmd = new SqlCommand("sp_Course_Master",sc))
+                using (SqlCommand cmd = new SqlCommand("sp_Course_Master", sc))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@mode", SqlDbType.VarChar, 50).Value = "update";
