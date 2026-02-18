@@ -15,6 +15,8 @@ namespace Exam_Mgmt
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<SubjectMasterService>();
+
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
 
             var app = builder.Build();
