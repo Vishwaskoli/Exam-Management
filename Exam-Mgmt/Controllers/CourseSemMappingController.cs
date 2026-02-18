@@ -15,18 +15,28 @@ namespace Exam_Mgmt.Controllers
             _service = service;
         }
 
-        // GET
+        // GET ALL
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_service.GetAll());
+            var data = await _service.GetAll();
+            return Ok(data);
         }
 
-        // POST (Insert + Update)
-        [HttpPost]
-        public IActionResult Post(CourseSemMapping model)
+        // GET BY ID
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(_service.Save(model));
+            var data = await _service.GetById(id);
+            return Ok(data);
+        }
+
+        // INSERT / UPDATE / DELETE
+        [HttpPost("{mode}")]
+        public async Task<IActionResult> Save(string mode, [FromBody] CourseSemMapping model)
+        {
+            var result = await _service.Save(model, mode);
+            return Ok(result);
         }
     }
 }

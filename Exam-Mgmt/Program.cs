@@ -19,10 +19,11 @@ namespace Exam_Mgmt
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
 
 
-//=======
-//HEAD
+
+            //=======
+            //HEAD
             //Subject_Master
-//=======
+            //=======
 
             // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>

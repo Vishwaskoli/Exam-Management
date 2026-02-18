@@ -1,8 +1,5 @@
 ﻿using Exam_Mgmt.Models;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Data;
 
 namespace Exam_Mgmt.Services
@@ -16,32 +13,38 @@ namespace Exam_Mgmt.Services
             _configuration = configuration;
         }
 
-        // ==========================
-        // GET
-        // ==========================
-        public List<object> GetAll()
+        private SqlConnection GetConnection()
         {
-            List<object> list = new List<object>();
+            return new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection"));
+        }
 
-            using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+        // GET ALL
+        public async Task<List<CourseSemMapping>> GetAll()
+        {
+            List<CourseSemMapping> list = new List<CourseSemMapping>();
+
+            using (SqlConnection con = GetConnection())
             {
                 SqlCommand cmd = new SqlCommand("SP_CourseSemMapping", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Mode", "GETALL");
 
-                cmd.Parameters.AddWithValue("@Mode", "GET");
+                await con.OpenAsync();
+                SqlDataReader reader = await cmd.ExecuteReaderAsync();
 
-                con.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
+                while (await reader.ReadAsync())
                 {
-                    list.Add(new
+                    list.Add(new CourseSemMapping
                     {
-                        Course_Sem_Map_Id = Convert.ToInt32(dr["Course_Sem_Map_Id"]),
-                        Course_Name = dr["Course_Name"].ToString(),
-                        Sem_Name = dr["Sem_Name"].ToString(),
-                        Created_By = Convert.ToInt32(dr["Created_By"]),
-                        Created_Date = Convert.ToDateTime(dr["Created_Date"])
+                        Course_Sem_Map_Id = Convert.ToInt32(reader["Course_Sem_Map_Id"]),
+                        Course_Id = Convert.ToInt32(reader["Course_Id"]),
+                        Sem_Id = Convert.ToInt32(reader["Sem_Id"]),
+                        Created_By = Convert.ToInt32(reader["Created_By"]),
+                        Created_Date = Convert.ToDateTime(reader["Created_Date"]),
+                        Modified_By = reader["Modified_By"] as int?,
+                        Modified_Date = reader["Modified_Date"] as DateTime?,
+                        Obsolete = reader["Obsolete"].ToString()
                     });
                 }
             }
@@ -49,39 +52,60 @@ namespace Exam_Mgmt.Services
             return list;
         }
 
-        // ==========================
-        // INSERT + UPDATE
-        // ==========================
-        public string Save(CourseSemMapping model)
+        // GET BY ID
+        public async Task<CourseSemMapping?> GetById(int id)
         {
-            using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            CourseSemMapping? model = null;
+
+            using (SqlConnection con = GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand("SP_CourseSemMapping", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Mode", "GETBYID");
+                cmd.Parameters.AddWithValue("@Course_Sem_Map_Id", id);
+
+                await con.OpenAsync();
+                SqlDataReader reader = await cmd.ExecuteReaderAsync();
+
+                if (await reader.ReadAsync())
+                {
+                    model = new CourseSemMapping
+                    {
+                        Course_Sem_Map_Id = Convert.ToInt32(reader["Course_Sem_Map_Id"]),
+                        Course_Id = Convert.ToInt32(reader["Course_Id"]),
+                        Sem_Id = Convert.ToInt32(reader["Sem_Id"]),
+                        Created_By = Convert.ToInt32(reader["Created_By"]),
+                        Created_Date = Convert.ToDateTime(reader["Created_Date"]),
+                        Modified_By = reader["Modified_By"] as int?,
+                        Modified_Date = reader["Modified_Date"] as DateTime?,
+                        Obsolete = reader["Obsolete"].ToString()
+                    };
+                }
+            }
+
+            return model;
+        }
+
+        // INSERT / UPDATE / DELETE
+        public async Task<string> Save(CourseSemMapping model, string mode)
+        {
+            using (SqlConnection con = GetConnection())
             {
                 SqlCommand cmd = new SqlCommand("SP_CourseSemMapping", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                if (model.Course_Sem_Map_Id == 0)
-                {
-                    cmd.Parameters.AddWithValue("@Mode", "INSERT");
-                    cmd.Parameters.AddWithValue("@Course_Id", model.Course_Id);
-                    cmd.Parameters.AddWithValue("@Sem_Id", model.Sem_Id);
-                    cmd.Parameters.AddWithValue("@Created_By", model.Created_By);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Mode", "UPDATE");
-                    cmd.Parameters.AddWithValue("@Course_Sem_Map_Id", model.Course_Sem_Map_Id);
-                    cmd.Parameters.AddWithValue("@Course_Id", model.Course_Id);
-                    cmd.Parameters.AddWithValue("@Sem_Id", model.Sem_Id);
-                    cmd.Parameters.AddWithValue("@Modified_By", model.Modified_By);
-                }
+                cmd.Parameters.AddWithValue("@Mode", mode);
+                cmd.Parameters.AddWithValue("@Course_Sem_Map_Id", model.Course_Sem_Map_Id);
+                cmd.Parameters.AddWithValue("@Course_Id", model.Course_Id);
+                cmd.Parameters.AddWithValue("@Sem_Id", model.Sem_Id);
+                cmd.Parameters.AddWithValue("@Created_By", model.Created_By);
+                cmd.Parameters.AddWithValue("@Modified_By", model.Modified_By ?? (object)DBNull.Value);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
+                await con.OpenAsync();
+                await cmd.ExecuteNonQueryAsync();
             }
 
-            return model.Course_Sem_Map_Id == 0
-                ? "Inserted Successfully"
-                : "Updated Successfully";
+            return "Success";
         }
     }
 }
