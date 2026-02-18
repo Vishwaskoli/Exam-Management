@@ -1888,39 +1888,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\admin\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\dell\\.nuget\\packages\\": {},
->>>>>>> origin/Shreyash
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
       "projectName": "Exam-Mgmt",
-      "projectPath": "C:\\Users\\admin\\Source\\Repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Source\\Repos\\Exam-Management\\Exam-Mgmt\\obj\\",
-=======
-      "projectUniqueName": "D:\\Shreyash\\exam\\Exam-Mgmt\\Exam-Mgmt.csproj",
-      "projectName": "Exam-Mgmt",
-      "projectPath": "D:\\Shreyash\\exam\\Exam-Mgmt\\Exam-Mgmt.csproj",
-      "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "D:\\Shreyash\\exam\\Exam-Mgmt\\obj\\",
->>>>>>> origin/Shreyash
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/Shreyash
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1980,11 +1964,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
->>>>>>> origin/Shreyash
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
