@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exam-Mgmt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fba162eb0dbf0de650779bf08d5527d42de992b4")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5a209c464fb58b295d9b38db84781e6f31b2058")]
->>>>>>> origin/Shreyash
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bf59659e51ae85f5cfe422938e195d41b97304a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Exam-Mgmt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Exam-Mgmt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
