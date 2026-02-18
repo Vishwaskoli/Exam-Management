@@ -10,9 +10,9 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class CourseMasterController : ControllerBase
     {
-        private readonly ICourseMasterService _courseMasterService;
+        private readonly CourseMasterService _courseMasterService;
 
-        public CourseMasterController(ICourseMasterService service)
+        public CourseMasterController(CourseMasterService service)
         {
             _courseMasterService = service;
         }
@@ -23,6 +23,7 @@ namespace Exam_Mgmt.Controllers
             var courses = await _courseMasterService.GetAllCoursesAsync();
             return Ok(courses);
         }
+<<<<<<< HEAD
 
         [HttpPost]
         public async Task<IActionResult> CreateCourse([FromBody] Course c1)
@@ -64,5 +65,7 @@ namespace Exam_Mgmt.Controllers
             else
                 return BadRequest("Course not Deleted");
         }
+=======
+>>>>>>> origin/chaitanya
     }
 }

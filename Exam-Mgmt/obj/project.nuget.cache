@@ -40,5 +40,15 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
