@@ -1,4 +1,5 @@
 ﻿using Exam_Mgmt.Models;
+using Exam_Mgmt.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -9,47 +10,55 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class CourseMasterController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
+        private readonly CourseMasterService _courseMasterService;
 
-        public CourseMasterController(IConfiguration configuration)
+        public CourseMasterController(CourseMasterService service)
         {
-            _configuration = configuration;
+            _courseMasterService = service;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetCourses()
         {
-            var courses = new List<Course>();
-
-            using (SqlConnection conn = new SqlConnection(
-                _configuration.GetConnectionString("DefaultConnection")))
-            {
-                await conn.OpenAsync();
-
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Course_Master", conn))
-                {
-                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
-                    {
-                        while (await reader.ReadAsync())
-                        {
-                            courses.Add(new Course
-                            {
-                                Course_Id = Convert.ToInt32(reader["Course_Id"]),
-                                Course_Name = reader["Course_Name"]?.ToString(),
-                                Obsolete = reader["Obsolete"]?.ToString(),
-                                Created_Date = Convert.ToDateTime(reader["Created_Date"]),
-                                Created_By = reader["Created_By"]?.ToString(),
-                                Modified_Date = reader["Modified_Date"] == DBNull.Value
-                                    ? null
-                                    : Convert.ToDateTime(reader["Modified_Date"]),
-                                Modified_By = reader["Modified_By"]?.ToString()
-                            });
-                        }
-                    }
-                }
-            }
-
+            var courses = await _courseMasterService.GetAllCoursesAsync();
             return Ok(courses);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateCourse([FromBody] Course c1)
+        {
+            int a = await _courseMasterService.CreateCourseAsync(c1);
+            if (a > 0)
+                return Ok("Course created succesfully");
+            else
+                return BadRequest("Course not created, check before submiting...");
+        }
+
+        [HttpGet("ActiveCourses")]
+        public async Task<IActionResult> GetActiveCourse()
+        {
+            var courses = await _courseMasterService.GetActiveCourseAsync();
+            return Ok(courses);
+        }
+
+        [HttpPost("UpdateCourse/{id}")]
+        public async Task<ActionResult> UpdateCourseName([FromBody]Course c, [FromRoute]int id)
+        {
+            int a = await _courseMasterService.UpdateCourseAsync(id,c);
+            if (a > 0)
+                return Ok($"Course Updated Succesfullly to {c.Course_Name}");
+            else
+                return BadRequest("Course not updated");
+        }
+
+        [HttpPost("DeleteCourse/{id}")]
+        public async Task<ActionResult> DeleteCourse([FromRoute] int id)
+        {
+            int a = await _courseMasterService.DeleteCourseAsync(id);
+            if (a > 0)
+                return Ok("Course Deleted Successfully");
+            else
+                return BadRequest("Course not Deleted");
         }
     }
 }
