@@ -10,9 +10,9 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class CourseMasterController : ControllerBase
     {
-        private readonly CourseMasterService _courseMasterService;
+        private readonly ICourseMasterService _courseMasterService;
 
-        public CourseMasterController(CourseMasterService service)
+        public CourseMasterController(ICourseMasterService service)
         {
             _courseMasterService = service;
         }

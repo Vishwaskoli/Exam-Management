@@ -19,12 +19,17 @@ namespace Exam_Mgmt
             //Subject_Master
             builder.Services.AddScoped<SubjectMasterService>();
 
+<<<<<<< HEAD
             //Subject_Sem_Map
             builder.Services.AddScoped<SubjectSemMappingService>();
 
 
             //=======
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+=======
+//=======
+            builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+>>>>>>> origin/Vishwas
 //>>>>>>> origin/Vishwas
 
             var app = builder.Build();
