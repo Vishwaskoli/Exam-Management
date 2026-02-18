@@ -24,8 +24,10 @@ namespace Exam_Mgmt.Services
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                SqlCommand cmd = new SqlCommand("sp_GetAllSubjects", conn);
+                SqlCommand cmd = new SqlCommand("sp_Subject_Master", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Mode", "View");
 
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -37,9 +39,10 @@ namespace Exam_Mgmt.Services
                         Subject_Id = Convert.ToInt32(reader["Subject_Id"]),
                         Subject_Name = reader["Subject_Name"].ToString(),
                         Created_Date = Convert.ToDateTime(reader["Created_Date"]),
-                        Created_By = reader["Created_By"].ToString(),
+                        Created_By = Convert.ToInt32(reader["Created_By"]),
                         Modified_Date = reader["Modified_Date"] == DBNull.Value ? null : (DateTime?)reader["Modified_Date"],
-                        Modified_By = reader["Modified_By"] == DBNull.Value ? null : reader["Modified_By"].ToString(),
+                        Modified_By = reader["Modified_By"] == DBNull.Value ? null : Convert.ToInt32(reader["Modified_By"]),
+
                         Obsolete = reader["Obsolete"].ToString()
                     });
                 }
@@ -48,64 +51,58 @@ namespace Exam_Mgmt.Services
             return subjects;
         }
 
-
-        // GET BY ID
-        public Subject GetSubjectById(int id)
-            {
-                Subject subject = null;
-
-                using (SqlConnection conn = new SqlConnection(_connectionString))
-                {
-                    string query = "SELECT * FROM Subject_Master WHERE Subject_Id = @Subject_Id";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@Subject_Id", id);
-
-                    conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        subject = new Subject
-                        {
-                            Subject_Id = Convert.ToInt32(reader["Subject_Id"]),
-                            Subject_Name = reader["Subject_Name"].ToString(),
-                            Created_Date = Convert.ToDateTime(reader["Created_Date"]),
-                            Created_By = reader["Created_By"].ToString(),
-                            Modified_Date = reader["Modified_Date"] == DBNull.Value ? null : (DateTime?)reader["Modified_Date"],
-                            Modified_By = reader["Modified_By"] == DBNull.Value ? null : reader["Modified_By"].ToString(),
-                            Obsolete = reader["Obsolete"].ToString()
-                        };
-                    }
-                }
-
-                return subject;
-            }
-
         // CREATE
-        public int CreateSubject(Subject subject)
+        public void CreateSubject(Subject subject)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                SqlCommand cmd = new SqlCommand("sp_InsertSubject", conn);
+                SqlCommand cmd = new SqlCommand("sp_Subject_Master", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@Mode", "Add");
                 cmd.Parameters.AddWithValue("@Subject_Name", subject.Subject_Name);
                 cmd.Parameters.AddWithValue("@Created_By", subject.Created_By);
-                cmd.Parameters.AddWithValue("@Obsolete", subject.Obsolete);
-
-                // Output parameter
-                SqlParameter outputIdParam = new SqlParameter("@NewSubjectId", SqlDbType.Int)
-                {
-                    Direction = ParameterDirection.Output
-                };
-                cmd.Parameters.Add(outputIdParam);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
-
-                return (int)outputIdParam.Value; // return new ID
             }
         }
+
+        //UPDATE
+        public void UpdateSubject(Subject subject)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("sp_Subject_Master", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Mode", "Update");
+                cmd.Parameters.AddWithValue("@Subject_Id", subject.Subject_Id);
+                cmd.Parameters.AddWithValue("@Subject_Name", subject.Subject_Name);
+                cmd.Parameters.AddWithValue("@Modified_By", subject.Modified_By);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        //DELETE
+        public void DeleteSubject(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("sp_Subject_Master", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Mode", "Delete");
+                cmd.Parameters.AddWithValue("@Subject_Id", id);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
 
     }
 }
