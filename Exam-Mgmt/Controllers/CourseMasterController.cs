@@ -1,8 +1,8 @@
-﻿//using Exam_Mgmt.Models;
-//using Exam_Mgmt.Services;
-//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.Data.SqlClient;
+﻿using Exam_Mgmt.Models;
+using Exam_Mgmt.Services;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 
 namespace Exam_Mgmt.Controllers
 {
