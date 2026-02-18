@@ -1,4 +1,5 @@
 
+using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 
 namespace Exam_Mgmt
@@ -15,7 +16,10 @@ namespace Exam_Mgmt
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+            //builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
 
             var app = builder.Build();
 

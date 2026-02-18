@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t9ZY5yHtReY=",
+  "dgSpecHash": "0XNrECetK8Q=",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
   "expectedPackageFiles": [
@@ -38,21 +38,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.24\\microsoft.netcore.app.host.win-x64.8.0.24.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
