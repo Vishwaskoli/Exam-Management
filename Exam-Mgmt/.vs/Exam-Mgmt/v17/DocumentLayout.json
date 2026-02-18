@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\Shreyash\\exam\\Exam-Mgmt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\services\\subjectsemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\subjectsemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\models\\subjectsemmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\subjectsemmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\services\\subjectmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,46 +62,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SubjectMasterService.cs",
-              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\SubjectMasterService.cs",
-              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
-              "RelativeToolTip": "Services\\SubjectMasterService.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAgwGIAAAAzAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T07:06:10.212Z",
+              "WhenOpened": "2026-02-18T10:26:14.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "SubjectSemMappingService.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectSemMappingService.cs",
+              "RelativeDocumentMoniker": "Services\\SubjectSemMappingService.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectSemMappingService.cs",
+              "RelativeToolTip": "Services\\SubjectSemMappingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T10:05:29.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SubjectSemMappingController.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubjectSemMappingController.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
+              "RelativeToolTip": "Controllers\\SubjectSemMappingController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T10:04:17.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SubjectMasterController.cs",
               "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
               "RelativeDocumentMoniker": "Controllers\\SubjectMasterController.cs",
               "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
               "RelativeToolTip": "Controllers\\SubjectMasterController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwv0gAAAAAAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwEgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-18T04:32:20.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "SubjectSemMapping.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Models\\SubjectSemMapping.cs",
+              "RelativeDocumentMoniker": "Models\\SubjectSemMapping.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Models\\SubjectSemMapping.cs",
+              "RelativeToolTip": "Models\\SubjectSemMapping.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T10:04:51.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Subject.cs",
               "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Models\\Subject.cs",
               "RelativeDocumentMoniker": "Models\\Subject.cs",
               "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Models\\Subject.cs",
               "RelativeToolTip": "Models\\Subject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-18T04:32:01.027Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubjectMasterService.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
+              "RelativeDocumentMoniker": "Services\\SubjectMasterService.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
+              "RelativeToolTip": "Services\\SubjectMasterService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T07:06:10.212Z",
+              "EditorCaption": ""
             }
           ]
         }

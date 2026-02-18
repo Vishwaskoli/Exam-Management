@@ -16,9 +16,14 @@ namespace Exam_Mgmt
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 //HEAD
+            //Subject_Master
             builder.Services.AddScoped<SubjectMasterService>();
 
-//=======
+            //Subject_Sem_Map
+            builder.Services.AddScoped<SubjectSemMappingService>();
+
+
+            //=======
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
 //>>>>>>> origin/Vishwas
 
