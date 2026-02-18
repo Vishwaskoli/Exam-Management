@@ -16,7 +16,7 @@ namespace Exam_Mgmt.Controllers
             _service = service;
         }
 
-        // ✅ GET: api/SubjectMaster
+        // GET: api/SubjectMaster
         [HttpGet]
         public ActionResult<List<Subject>> GetAll()
         {
@@ -24,16 +24,12 @@ namespace Exam_Mgmt.Controllers
             return Ok(subjects);
         }
 
-        // ✅ POST: api/SubjectMaster
-        [HttpPost]
+        // POST: api/SubjectMaster/Create
+        [HttpPost("Create")]
         public IActionResult Create([FromBody] Subject subject)
         {
             if (subject == null || string.IsNullOrWhiteSpace(subject.Subject_Name) || subject.Created_By <= 0)
-            {
                 return BadRequest("Subject_Name and Created_By are required.");
-            }
-
-
 
             _service.CreateSubject(subject);
 
@@ -43,12 +39,12 @@ namespace Exam_Mgmt.Controllers
             });
         }
 
-        // ✅ PUT: api/SubjectMaster
-        [HttpPut]
+        // POST: api/SubjectMaster/Update
+        [HttpPost("Update")]
         public IActionResult Update([FromBody] Subject subject)
         {
-            if (subject == null || subject.Subject_Id <= 0)
-                return BadRequest("Valid Subject_Id is required.");
+            if (subject == null || subject.Subject_Id <= 0 || subject.Modified_By == null)
+                return BadRequest("Valid Subject_Id and Modified_By are required.");
 
             _service.UpdateSubject(subject);
 
@@ -58,8 +54,8 @@ namespace Exam_Mgmt.Controllers
             });
         }
 
-        // ✅ DELETE: api/SubjectMaster/5
-        [HttpDelete("{id}")]
+        // POST: api/SubjectMaster/Delete
+        [HttpPost("Delete/{id}")]
         public IActionResult Delete(int id)
         {
             if (id <= 0)

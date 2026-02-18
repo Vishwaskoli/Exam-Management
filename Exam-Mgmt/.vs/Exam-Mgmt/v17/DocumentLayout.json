@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\administrator\\desktop\\github\\exam-management\\exam-mgmt\\controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +28,17 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\administrator\\desktop\\github\\exam-management\\exam-mgmt\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\services\\subjectmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\subjectmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\shreyash\\exam\\exam-mgmt\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> origin/Shreyash
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -45,7 +57,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 8,
+=======
+          "SelectedChildIndex": 6,
+>>>>>>> origin/Shreyash
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,6 +94,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -86,10 +103,34 @@
               "ViewState": "AgIAABgBAAAAAAAAAAAwwAkBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-02-18T07:06:02.925Z",
+=======
+              "Title": "SubjectMasterService.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
+              "RelativeDocumentMoniker": "Services\\SubjectMasterService.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
+              "RelativeToolTip": "Services\\SubjectMasterService.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAgwGIAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T07:06:10.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubjectMasterController.cs",
+              "DocumentMoniker": "D:\\Shreyash\\exam\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubjectMasterController.cs",
+              "ToolTip": "D:\\Shreyash\\exam\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
+              "RelativeToolTip": "Controllers\\SubjectMasterController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAADwv0gAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T04:32:20.596Z",
+>>>>>>> origin/Shreyash
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "CourseMasterController.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseMasterController.cs",
@@ -154,6 +195,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+=======
+              "DocumentIndex": 2,
+>>>>>>> origin/Shreyash
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Github\\Exam-Management\\Exam-Mgmt\\Models\\Subject.cs",
               "RelativeDocumentMoniker": "Models\\Subject.cs",
@@ -161,8 +205,17 @@
               "RelativeToolTip": "Models\\Subject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2026-02-16T11:57:26.624Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2026-02-18T04:32:01.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+>>>>>>> origin/Shreyash
             }
           ]
         }
