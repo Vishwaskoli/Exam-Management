@@ -3,7 +3,7 @@
 namespace Exam_Mgmt.Models { 
     public class Subject
     {
-        public required int Subject_Id { get; set; }
+        public int Subject_Id { get; set; }
         public required string ? Subject_Name { get; set; }
         public DateTime Created_Date { get; set; }
         public required string ? Created_By { get; set; }

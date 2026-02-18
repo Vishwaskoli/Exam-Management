@@ -36,15 +36,16 @@ namespace Exam_Mgmt.Controllers
                 return Ok(subject);
             }
 
-            // POST: api/SubjectMaster
-            [HttpPost]
-            public IActionResult Create([FromBody] Subject subject)
-            {
-                if (subject == null)
-                    return BadRequest();
+        // POST: api/SubjectMaster
+        [HttpPost]
+        public IActionResult Create([FromBody] Subject subject)
+        {
+            if (subject == null || string.IsNullOrWhiteSpace(subject.Subject_Name) || string.IsNullOrWhiteSpace(subject.Created_By))
+                return BadRequest("Subject_Name and Created_By are required");
 
-                int newId = _service.CreateSubject(subject);
-                return Ok(new { Subject_Id = newId });
-            }
+            int newId = _service.CreateSubject(subject);
+            return Ok(new { Subject_Id = newId });
         }
+
     }
+}
