@@ -23,7 +23,7 @@ namespace Exam_Mgmt.Controllers
             var courses = await _courseMasterService.GetAllCoursesAsync();
             return Ok(courses);
         }
-<<<<<<< HEAD
+
 
         [HttpPost]
         public async Task<IActionResult> CreateCourse([FromBody] Course c1)
@@ -65,7 +65,6 @@ namespace Exam_Mgmt.Controllers
             else
                 return BadRequest("Course not Deleted");
         }
-=======
->>>>>>> origin/chaitanya
+
     }
 }
