@@ -1,5 +1,6 @@
-
 using Exam_Mgmt.Services;
+using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 
 namespace Exam_Mgmt
 {
@@ -9,43 +10,39 @@ namespace Exam_Mgmt
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
+            // Add services
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-//HEAD
-            //Subject_Master
+
+            // ? VERY IMPORTANT
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Exam Management API",
+                    Version = "v1"
+                });
+            });
+
+            // Register services
             builder.Services.AddScoped<SubjectMasterService>();
-
-<<<<<<< HEAD
-            //Subject_Sem_Map
             builder.Services.AddScoped<SubjectSemMappingService>();
-
-
-            //=======
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-=======
-//=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
->>>>>>> origin/Vishwas
-//>>>>>>> origin/Vishwas
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Configure middleware
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwagger();      // This needs AddSwaggerGen()
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
+                });
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();
