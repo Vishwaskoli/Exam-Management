@@ -14,12 +14,12 @@ namespace Exam_Mgmt.Services
             cs = config.GetConnectionString("DefaultConnection");
         }
 
-//        public async Task<List<Course>> GetAllCoursesAsync()
-//        {
-//            var courses = new List<Course>();
-//            using (SqlConnection conn = new SqlConnection(cs))
-//            {
-//                await conn.OpenAsync();
+        public async Task<List<Course>> GetAllCoursesAsync()
+        {
+            var courses = new List<Course>();
+            using (SqlConnection conn = new SqlConnection(cs))
+            {
+                await conn.OpenAsync();
 
                 using (SqlCommand cmd = new SqlCommand(
                     "sp_GetAllCourse",
