@@ -39,9 +39,9 @@ namespace Exam_Mgmt.Services
                                 //Modified_Date = reader["Modified_Date"] == DBNull.Value
                                 //    ? null
                                 //    : Convert.ToDateTime(reader["Modified_Date"]),
-                                //Modified_By = reader["Modified_By"] == DBNull.Value
-                                //              ? null
-                                //              : Convert.ToInt32(reader["Modified_By"])
+                                Modified_By = reader["Modified_By"] == DBNull.Value
+                                              ? null
+                                              : Convert.ToInt32(reader["Modified_By"])
                             });
                         }
                     }
@@ -107,7 +107,10 @@ namespace Exam_Mgmt.Services
                             {
                                 Course_Id = Convert.ToInt32(rd["Course_Id"]),
                                 Course_Name = rd[1].ToString(),
-                                Created_By = Convert.ToInt32(rd[4])
+                                Created_By = Convert.ToInt32(rd[4]),
+                                Modified_By = rd["Modified_By"] == DBNull.Value
+                                              ? null
+                                              : Convert.ToInt32(rd["Modified_By"])
                             });
                         }
                     }
