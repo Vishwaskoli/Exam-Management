@@ -13,16 +13,16 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-<<<<<<< HEAD
+//<<<<<<< HEAD
             builder.Services.AddSwaggerGen();
-<<<<<<< HEAD
+//<<<<<<< HEAD
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
 
 
-=======
+//=======
 //HEAD
             //Subject_Master
-=======
+//=======
 
             // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
@@ -35,19 +35,19 @@ namespace Exam_Mgmt
             });
 
             // Register services
->>>>>>> origin/Shreyash
+//>>>>>>> origin/Shreyash
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
             //=======
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
 //>>>>>>> origin/Vishwas
->>>>>>> origin/Shreyash
-=======
+//>>>>>>> origin/Shreyash
+//=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
->>>>>>> origin/Shreyash
+//>>>>>>> origin/Shreyash
 
             var app = builder.Build();
 

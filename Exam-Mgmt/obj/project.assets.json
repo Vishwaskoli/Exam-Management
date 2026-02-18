@@ -1884,11 +1884,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+      "projectUniqueName": "D:\\Mayur\\Exam-Mgmt\\Exam-Mgmt.csproj",
       "projectName": "Exam-Mgmt",
-      "projectPath": "C:\\Users\\admin\\Source\\Repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+      "projectPath": "D:\\Mayur\\Exam-Mgmt\\Exam-Mgmt.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Source\\Repos\\Exam-Management\\Exam-Mgmt\\obj\\",
+      "outputPath": "D:\\Mayur\\Exam-Mgmt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1958,5 +1958,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Mayur\\Exam-Mgmt\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }
