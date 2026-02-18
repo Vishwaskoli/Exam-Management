@@ -27,6 +27,8 @@ namespace Exam_Mgmt.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCourse([FromBody] Course c1)
         {
+            if (c1 == null || string.IsNullOrWhiteSpace(c1.Course_Name))
+                return BadRequest("Course Name and Created_By are required.");
             int a = await _courseMasterService.CreateCourseAsync(c1);
             if (a > 0)
                 return Ok("Course created succesfully");
@@ -44,6 +46,8 @@ namespace Exam_Mgmt.Controllers
         [HttpPost("UpdateCourse/{id}")]
         public async Task<ActionResult> UpdateCourseName([FromBody]Course c, [FromRoute]int id)
         {
+            if (c == null || string.IsNullOrWhiteSpace(c.Course_Name))
+                return BadRequest("Valid Course Name and Modified_By are required.");
             int a = await _courseMasterService.UpdateCourseAsync(id,c);
             if (a > 0)
                 return Ok($"Course Updated Succesfullly to {c.Course_Name}");
