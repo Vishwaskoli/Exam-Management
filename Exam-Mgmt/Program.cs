@@ -26,6 +26,7 @@ namespace Exam_Mgmt
             builder.Services.AddSwaggerGen();
 //<<<<<<< HEAD
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
 
 
             //FrontEnd

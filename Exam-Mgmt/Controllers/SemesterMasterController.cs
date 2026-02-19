@@ -15,7 +15,7 @@ namespace Exam_Mgmt.Controllers
         {
             _repo = repo;
         }
-
+        
         [HttpGet]
         public async Task<IActionResult> Get()
         {
