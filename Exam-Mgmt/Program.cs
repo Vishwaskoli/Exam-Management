@@ -84,7 +84,7 @@ namespace Exam_Mgmt
 //<<<<<<< HEAD
 //>>>>>>> origin/Shreyash
 //=======
-            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<SemesterMasterService>(); 
 
 //>>>>>>> origin/chaitanya
 

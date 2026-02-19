@@ -1,5 +1,5 @@
 ﻿using Exam_Mgmt.Models;
-using Exam_Mgmt.Repositories;
+//using Exam_Mgmt.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
@@ -114,7 +114,7 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class SemesterMasterController : ControllerBase
     {
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         private readonly SemesterMasterService _semesterMasterService;
         public SemesterMasterController(SemesterMasterService semesterMasterService)
         {
@@ -126,15 +126,15 @@ namespace Exam_Mgmt.Controllers
             var semester = await _semesterMasterService.GetSemestersAsync();
             return Ok(semester);
         }
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
         private readonly ISemesterRepository _repo;
 
         public SemesterMasterController(ISemesterRepository repo)
         {
             _repo = repo;
         }
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -159,10 +159,10 @@ namespace Exam_Mgmt.Controllers
             return Ok(new { NewId = id });
         }
          //✅ GET ALL
-=======
+//=======
 
         // GET - Read All
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         [HttpGet]
         public async Task<IActionResult> Get()
         {
