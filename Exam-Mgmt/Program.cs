@@ -27,7 +27,7 @@ namespace Exam_Mgmt
 //<<<<<<< HEAD
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
 
-<<<<<<< HEAD
+
             //FrontEnd
             builder.Services.AddCors(options =>
             {
@@ -37,10 +37,10 @@ namespace Exam_Mgmt
                                       .AllowAnyHeader());
             });
 
-=======
 
-            builder.Services.AddScoped<ISemesterRepository,SemesterRepository>();
->>>>>>> origin/vishwas-clean
+
+           // builder.Services.AddScoped<ISemesterRepository,SemesterRepository>();
+
             //=======
             //HEAD
             //Subject_Master
@@ -112,12 +112,12 @@ namespace Exam_Mgmt
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
                 });
             }
-<<<<<<< HEAD
+
 
             app.UseCors("AllowAll");
-=======
+
             app.UseCors("ReactPolicy");
->>>>>>> origin/vishwas-clean
+
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseCors("AllowReactApp");
