@@ -25,6 +25,17 @@ namespace Exam_Mgmt.Services
                 {
                     using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
+                        //<<<<<<< Updated upstream
+                        //=======
+                        //<<<<<<< Updated upstream
+                        //Sem_Id = Convert.ToInt32(reader["Sem_Id"]);
+                        //Sem_Name = reader["Sem_Name"].ToString();
+                        //Created_Date = Convert.ToDateTime(reader["Created_Date"]);
+                        //Created_By = Convert.ToInt32(reader["Created_By"]);
+                        //Modified_Date = reader["Modified_Date"] == DBNull.Value ? null : (DateTime?)reader["Modified_Date"];
+                        //Modified_By = reader["Modified_By"] == DBNull.Value ? null : Convert.ToInt32(reader["Modified_By"]);
+//=======
+//>>>>>>> Stashed changes
                         while (await reader.ReadAsync())
                         {
                             semesters.Add(new Semester
@@ -45,6 +56,10 @@ namespace Exam_Mgmt.Services
                     }
                 }
             }  // ✅ Bug 3 fixed — SqlConnection ka closing brace add kiya
+//<<<<<<< Updated upstream
+//=======
+//>>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
             return semesters;
         }

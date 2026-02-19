@@ -1,7 +1,10 @@
 ﻿using Exam_Mgmt.Models;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
+//<<<<<<< Updated upstream
 using Microsoft.AspNetCore.Http;
+//=======
+//>>>>>>> Stashed changes
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
@@ -10,6 +13,7 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class SemesterMasterController : ControllerBase
     {
+//<<<<<<< Updated upstream
         //private readonly SemesterMasterService _semesterMasterService;
         //public SemesterMasterController(SemesterMasterService semesterMasterService)
         //{
@@ -21,6 +25,22 @@ namespace Exam_Mgmt.Controllers
         //    var semester = await _semesterMasterService.GetSemestersAsync();
         //    return Ok(semester);
         //}
+//=======
+//<<<<<<< Updated upstream
+        private readonly SemesterMasterService _semesterMasterService;
+        public SemesterMasterController(SemesterMasterService semesterMasterService)
+        {
+            _semesterMasterService = semesterMasterService;
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetSemesters()
+        {
+            var semester = await _semesterMasterService.GetSemestersAsync();
+            return Ok(semester);
+        }
+//=======
+//>>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         private readonly ISemesterRepository _repo;
         public SemesterMasterController(ISemesterRepository repo)
         {
@@ -43,6 +63,7 @@ namespace Exam_Mgmt.Controllers
         //    return Ok(data);
         //}
 
+//<<<<<<< Updated upstream
         //[HttpPost]
         //public async Task<IActionResult> Create(Semester semester)
         //{
@@ -50,6 +71,19 @@ namespace Exam_Mgmt.Controllers
         //    return Ok(new { NewId = id });
         //}
         // ✅ GET ALL
+//=======
+        [HttpPost]
+        public async Task<IActionResult> Create(Semester semester)
+        {
+            var id = await _repo.CreateAsync(semester);
+            return Ok(new { NewId = id });
+        }
+         //✅ GET ALL
+//=======
+
+        // GET - Read All
+//>>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         [HttpGet]
         public async Task<IActionResult> Get()
         {
