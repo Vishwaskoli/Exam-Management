@@ -1,3 +1,4 @@
+using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
@@ -13,12 +14,20 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("ReactPolicy", policy => { policy.WithOrigins("http://localhost:5173")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
 //<<<<<<< HEAD
 //<<<<<<< HEAD
             builder.Services.AddSwaggerGen();
 //<<<<<<< HEAD
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
 
+<<<<<<< HEAD
             //FrontEnd
             builder.Services.AddCors(options =>
             {
@@ -28,6 +37,10 @@ namespace Exam_Mgmt
                                       .AllowAnyHeader());
             });
 
+=======
+
+            builder.Services.AddScoped<ISemesterRepository,SemesterRepository>();
+>>>>>>> origin/vishwas-clean
             //=======
             //HEAD
             //Subject_Master
@@ -99,8 +112,12 @@ namespace Exam_Mgmt
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
                 });
             }
+<<<<<<< HEAD
 
             app.UseCors("AllowAll");
+=======
+            app.UseCors("ReactPolicy");
+>>>>>>> origin/vishwas-clean
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseCors("AllowReactApp");
