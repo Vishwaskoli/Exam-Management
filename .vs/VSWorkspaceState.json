@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Exam-Mgmt",
+    "\\Exam-Mgmt\\Controllers"
   ],
-  "SelectedNode": "\\D:\\Mayur",
+  "SelectedNode": "\\Exam-Mgmt\\Controllers\\CourseSemMappingController.cs",
   "PreviewInSolutionExplorer": false
 }

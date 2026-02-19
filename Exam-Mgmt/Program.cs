@@ -48,7 +48,19 @@ namespace Exam_Mgmt
 //>>>>>>> origin/Shreyash
 //=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
-//>>>>>>> origin/Shreyash
+            //>>>>>>> origin/Shreyash
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("ReactPolicy",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
 
             var app = builder.Build();
 
@@ -63,6 +75,7 @@ namespace Exam_Mgmt
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("ReactPolicy");
             app.UseAuthorization();
             app.MapControllers();
 
