@@ -98,3 +98,20 @@ BEGIN
     END
 END
 
+
+IF OBJECT_ID('dbo.Semester_Master', 'U') IS NOT NULL
+    DROP TABLE dbo.Semester_Master;
+GO
+
+CREATE TABLE dbo.Semester_Master
+(
+    Sem_Id INT IDENTITY(1,1) PRIMARY KEY,
+    Sem_Name VARCHAR(50) NOT NULL,
+    Created_By INT NOT NULL,
+    Created_Date DATETIME NOT NULL DEFAULT GETDATE(),
+    Modified_By INT NULL,
+    Modified_Date DATETIME NULL,
+    Obsolete CHAR(1) NOT NULL DEFAULT 'N'
+);
+GO
+

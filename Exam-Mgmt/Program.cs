@@ -49,8 +49,17 @@ namespace Exam_Mgmt
             });
 
             // Register services
+//>>>>>>> origin/Shreyash
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
+//<<<<<<< HEAD
+
+
+            //=======
+            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+//>>>>>>> origin/Vishwas
+//>>>>>>> origin/Shreyash
+//=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
@@ -67,7 +76,7 @@ namespace Exam_Mgmt
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
                 });
             }
-
+            app.UseCors("ReactPolicy");
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseCors("AllowReactApp");
