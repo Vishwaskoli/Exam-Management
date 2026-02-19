@@ -12,3 +12,4 @@ namespace Exam_Mgmt.Repositories
         public Task<int> ExecuteAsync(Semester semester, string mode);
     }
 }
+//ss
