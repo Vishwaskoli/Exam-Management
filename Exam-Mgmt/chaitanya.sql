@@ -1,5 +1,6 @@
 ﻿select * from Semester_Master
 dbcc checkident('Semester_Master',reseed,8)
+update Semester_Master set Obsolete='N'
 
 set identity_insert Semester_Master off
 delete from Semester_Master where Sem_Name='IT'

@@ -36,12 +36,35 @@ namespace Exam_Mgmt.Services
                 {
                     subjects.Add(new Subject
                     {
+<<<<<<< Updated upstream
                         Subject_Id = Convert.ToInt32(reader["Sem_Id"]),
                         Subject_Name = reader["Sem_Name"].ToString(),
                         Created_Date = Convert.ToDateTime(reader["Created_Date"]),
                         Created_By = Convert.ToInt32(reader["Created_By"]),
                         Modified_Date = reader["Modified_Date"] == DBNull.Value ? null : (DateTime?)reader["Modified_Date"],
                         Modified_By = reader["Modified_By"] == DBNull.Value ? null : Convert.ToInt32(reader["Modified_By"]),
+=======
+                        while (await reader.ReadAsync())
+                        {
+                            semesters.Add(new Semester
+                            {
+                                Sem_Id = Convert.ToInt32(reader["Sem_Id"]),  // ✅ Bug 2 fixed
+                                Sem_Name = reader["Sem_Name"].ToString(),
+                                Created_By = (int)reader["Created_By"],
+                                Created_Date = Convert.ToDateTime(reader["Created_Date"]),
+                                Modified_By = reader["Modified_By"] == DBNull.Value   // ✅ null check for safety
+                                               ? null
+                                               : (int)reader["Modified_By"],
+                                Modified_Date = reader["Modified_Date"] == DBNull.Value
+                                               ? null
+                                               : Convert.ToDateTime(reader["Modified_Date"]),
+                                Obsolete = reader["Obsolete"].ToString()
+                            });
+                        }
+                    }
+                }
+            }  // ✅ Bug 3 fixed — SqlConnection ka closing brace add kiya
+>>>>>>> Stashed changes
 
                         Obsolete = reader["Obsolete"].ToString()
                     });

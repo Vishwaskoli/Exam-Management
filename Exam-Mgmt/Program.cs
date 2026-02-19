@@ -1,3 +1,4 @@
+using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
@@ -13,6 +14,29 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
 
             // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
@@ -28,6 +52,9 @@ namespace Exam_Mgmt
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
 
             var app = builder.Build();
 
@@ -42,6 +69,8 @@ namespace Exam_Mgmt
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowAll");
+            app.UseCors("AllowReactApp");
             app.UseAuthorization();
             app.MapControllers();
 
