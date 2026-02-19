@@ -1,4 +1,3 @@
-using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
@@ -14,7 +13,7 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //<<<<<<< HEAD
             builder.Services.AddSwaggerGen();
 //<<<<<<< HEAD
@@ -33,7 +32,7 @@ namespace Exam_Mgmt
             //HEAD
             //Subject_Master
             //=======
-=======
+//=======
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -57,7 +56,7 @@ namespace Exam_Mgmt
                     });
             });
 
->>>>>>> origin/chaitanya
+//>>>>>>> origin/chaitanya
 
             // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
@@ -82,13 +81,12 @@ namespace Exam_Mgmt
 //>>>>>>> origin/Shreyash
 //=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //>>>>>>> origin/Shreyash
-=======
+//=======
             builder.Services.AddScoped<SemesterMasterService>();
-            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
 
->>>>>>> origin/chaitanya
+//>>>>>>> origin/chaitanya
 
             var app = builder.Build();
 
