@@ -1,3 +1,4 @@
+using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
@@ -13,6 +14,7 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+<<<<<<< HEAD
 //<<<<<<< HEAD
             builder.Services.AddSwaggerGen();
 //<<<<<<< HEAD
@@ -31,6 +33,31 @@ namespace Exam_Mgmt
             //HEAD
             //Subject_Master
             //=======
+=======
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
+>>>>>>> origin/chaitanya
 
             // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
@@ -55,7 +82,13 @@ namespace Exam_Mgmt
 //>>>>>>> origin/Shreyash
 //=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+<<<<<<< HEAD
 //>>>>>>> origin/Shreyash
+=======
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
+>>>>>>> origin/chaitanya
 
             var app = builder.Build();
 
@@ -71,6 +104,8 @@ namespace Exam_Mgmt
 
             app.UseCors("AllowAll");
             app.UseHttpsRedirection();
+            app.UseCors("AllowAll");
+            app.UseCors("AllowReactApp");
             app.UseAuthorization();
             app.MapControllers();
 
