@@ -33,12 +33,12 @@ namespace Exam_Mgmt.Services
                             {
                                 Course_Id = Convert.ToInt32(reader["Course_Id"]),
                                 Course_Name = reader["Course_Name"]?.ToString(),
-                                //Obsolete = Convert.ToChar(reader["Obsolete"]),
-                                //Created_Date = Convert.ToDateTime(reader["Created_Date"]),
+                                Obsolete = Convert.ToChar(reader["Obsolete"]),
+                                Created_Date = Convert.ToDateTime(reader["Created_Date"]),
                                 Created_By = Convert.ToInt32(reader["Created_By"]),
-                                //Modified_Date = reader["Modified_Date"] == DBNull.Value
-                                //    ? null
-                                //    : Convert.ToDateTime(reader["Modified_Date"]),
+                                Modified_Date = reader["Modified_Date"] == DBNull.Value
+                                    ? null
+                                    : Convert.ToDateTime(reader["Modified_Date"]),
                                 Modified_By = reader["Modified_By"] == DBNull.Value
                                               ? null
                                               : Convert.ToInt32(reader["Modified_By"])
@@ -108,6 +108,10 @@ namespace Exam_Mgmt.Services
                             {
                                 Course_Id = Convert.ToInt32(rd["Course_Id"]),
                                 Course_Name = rd[1].ToString(),
+                                Obsolete = Convert.ToChar(rd["Obsolete"]),
+                                Modified_Date = rd["Modified_Date"] == DBNull.Value
+                                    ? null
+                                    : Convert.ToDateTime(rd["Modified_Date"]),
                                 Created_By = Convert.ToInt32(rd[4]),
                                 Modified_By = rd["Modified_By"] == DBNull.Value
                                               ? null
