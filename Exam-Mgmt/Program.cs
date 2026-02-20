@@ -1,3 +1,4 @@
+using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
@@ -13,17 +14,29 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-//<<<<<<< HEAD
-            builder.Services.AddSwaggerGen();
-//<<<<<<< HEAD
-            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
 
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
 
-            //=======
-            //HEAD
-            //Subject_Master
-            //=======
 
             // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
@@ -48,7 +61,9 @@ namespace Exam_Mgmt
 //>>>>>>> origin/Shreyash
 //=======
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
-            //>>>>>>> origin/Shreyash
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
 
             builder.Services.AddCors(options =>
             {
@@ -73,8 +88,10 @@ namespace Exam_Mgmt
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
                 });
             }
-
+            app.UseCors("ReactPolicy");
             app.UseHttpsRedirection();
+            app.UseCors("AllowAll");
+            app.UseCors("AllowReactApp");
             app.UseCors("ReactPolicy");
             app.UseAuthorization();
             app.MapControllers();
