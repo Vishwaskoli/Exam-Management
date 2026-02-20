@@ -70,5 +70,16 @@ namespace Exam_Mgmt.Controllers
                 Message = "Subject-Semester mapping deleted successfully"
             });
         }
+
+        [HttpPost("DeleteBySemester/{semId}")]
+        public IActionResult DeleteBySemester(int semId)
+        {
+            if (semId <= 0)
+                return BadRequest("Invalid Semester Id");
+
+            _service.DeleteBySemester(semId,1);
+
+            return Ok(new { Message = "All mappings for this semester deleted successfully" });
+        }
     }
 }

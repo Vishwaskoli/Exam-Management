@@ -97,5 +97,22 @@ public class SubjectSemMappingService
             cmd.ExecuteNonQuery();
         }
     }
+
+    // DELETE ALL MAPPINGS FOR A SEMESTER
+    public void DeleteBySemester(int semId, int modifiedBy)
+    {
+        using (SqlConnection conn = new SqlConnection(_connectionString))
+        {
+            SqlCommand cmd = new SqlCommand("sp_Subject_Sem_Mapping", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Mode", "DeleteBySemester"); // You need to handle this in your SP
+            cmd.Parameters.AddWithValue("@Sem_Id", semId);
+            cmd.Parameters.AddWithValue("@Modified_By", modifiedBy);
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+        }
+    }
 }
 
