@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CourseSemMappingController : ControllerBase
     {
         private readonly ICourseSemMappingService _service;

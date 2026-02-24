@@ -52,7 +52,8 @@ namespace Exam_Mgmt
 //>>>>>>> origin/Shreyash
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
-//<<<<<<< HEAD
+            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
+            //<<<<<<< HEAD
 
 
             //=======
