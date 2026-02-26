@@ -8,7 +8,7 @@ namespace Exam_Mgmt.Repositories
         public Task<Semester?> GetByIdAsync(int id);
         public Task<int> CreateAsync(Semester semester);
         public Task<int> UpdateAsync(Semester semester);
-        public Task<int> DeleteAsync(int id, int modifiedBy);
+        public Task<int> DeleteAsync(int id, int modifiedBy, decimal? latitude, decimal? longitude);
         public Task<int> ExecuteAsync(Semester semester, string mode);
     }
 }

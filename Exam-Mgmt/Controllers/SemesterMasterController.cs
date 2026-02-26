@@ -37,7 +37,6 @@ namespace Exam_Mgmt.Controllers
                 id = result,
                 message = "Success"
             });
-
         }
     }
 }

@@ -27,7 +27,9 @@ namespace Exam_Mgmt.Repositories
                     Sem_Id = (int)dr["Sem_Id"],
                     Sem_Name = (string)dr["Sem_Name"],
                     Created_Date = Convert.ToDateTime(dr["Created_Date"]),
-                    Obsolete = (string)dr["Obsolete"]
+                    Obsolete = (string)dr["Obsolete"],
+                    Latitude = dr["Latitude"] == DBNull.Value ? null : Convert.ToDecimal(dr["Latitude"]),
+                    Longitude = dr["Longitude"] == DBNull.Value ? null : Convert.ToDecimal(dr["Longitude"])
                 });
             }
             return list;
@@ -56,13 +58,21 @@ namespace Exam_Mgmt.Repositories
         {
             using SqlConnection con = new SqlConnection(_cs);
             using SqlCommand cmd = new SqlCommand("sp_SemesterCRUD", con);
+
             cmd.CommandType = CommandType.StoredProcedure;
+
             cmd.Parameters.AddWithValue("@Mode", "Create");
             cmd.Parameters.AddWithValue("@Sem_Name", semester.Sem_Name);
             cmd.Parameters.AddWithValue("@Created_By", semester.Created_By);
+            cmd.Parameters.AddWithValue("@Latitude",
+                semester.Latitude ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@Longitude",
+                semester.Longitude ?? (object)DBNull.Value);
+
             await con.OpenAsync();
             var result = await cmd.ExecuteScalarAsync();
-            return (int)result;
+
+            return Convert.ToInt32(result);
         }
         public async Task<int> UpdateAsync(Semester semester)
         {
@@ -81,15 +91,20 @@ namespace Exam_Mgmt.Repositories
             return Convert.ToInt32(result);
         }
 
-        public async Task<int> DeleteAsync(int id, int modifiedBy)
+        public async Task<int> DeleteAsync(int id, int modifiedBy, decimal? latitude, decimal? longitude)
         {
             using SqlConnection conn = new SqlConnection(_cs);
             using SqlCommand cmd = new SqlCommand("sp_SemesterCRUD", conn);
 
             cmd.CommandType = CommandType.StoredProcedure;
+
             cmd.Parameters.AddWithValue("@Mode", "Delete");
             cmd.Parameters.AddWithValue("@Sem_Id", id);
             cmd.Parameters.AddWithValue("@Modified_By", modifiedBy);
+            cmd.Parameters.AddWithValue("@Latitude",
+                latitude ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@Longitude",
+                longitude ?? (object)DBNull.Value);
 
             await conn.OpenAsync();
             var result = await cmd.ExecuteScalarAsync();
@@ -104,10 +119,25 @@ namespace Exam_Mgmt.Repositories
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@Mode", mode);
-            cmd.Parameters.AddWithValue("@Sem_Id", semester.Sem_Id == 0 ? DBNull.Value : semester.Sem_Id);
-            cmd.Parameters.AddWithValue("@Sem_Name", semester.Sem_Name ?? (object)DBNull.Value);
-            cmd.Parameters.AddWithValue("@Created_By", semester.Created_By);
-            cmd.Parameters.AddWithValue("@Modified_By", semester.Modified_By);
+
+            cmd.Parameters.AddWithValue("@Sem_Id",
+                semester.Sem_Id == 0 ? DBNull.Value : semester.Sem_Id);
+
+            cmd.Parameters.AddWithValue("@Sem_Name",
+                semester.Sem_Name ?? (object)DBNull.Value);
+
+            cmd.Parameters.AddWithValue("@Created_By",
+                semester.Created_By == 0 ? DBNull.Value : semester.Created_By);
+
+            cmd.Parameters.AddWithValue("@Modified_By",
+                semester.Modified_By == null ? DBNull.Value : semester.Modified_By);
+
+            // 🔥 NEW LOCATION PARAMETERS
+            cmd.Parameters.AddWithValue("@Latitude",
+                semester.Latitude == null ? DBNull.Value : semester.Latitude);
+
+            cmd.Parameters.AddWithValue("@Longitude",
+                semester.Longitude == null ? DBNull.Value : semester.Longitude);
 
             await conn.OpenAsync();
 
