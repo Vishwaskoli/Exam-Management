@@ -10,19 +10,19 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class CourseMasterController : ControllerBase
     {
-        private readonly CourseMasterService _courseMasterService;
+        private readonly ICourseMasterService _courseMasterService;
 
-        public CourseMasterController(CourseMasterService service)
+        public CourseMasterController(ICourseMasterService service)
         {
             _courseMasterService = service;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetCourses()
-        {
-            var courses = await _courseMasterService.GetAllCoursesAsync();
-            return Ok(courses);
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetCourses()
+        //{
+        //    var courses = await _courseMasterService.GetAllCoursesAsync();
+        //    return Ok(courses);
+        //}
 
 
         [HttpPost]
@@ -57,6 +57,7 @@ namespace Exam_Mgmt.Controllers
         }
 
         [HttpPost("DeleteCourse/{id}")]
+        //public async Task<ActionResult> DeleteCourse([FromRoute] int id, [FromQuery] decimal lat, [FromQuery] decimal lon)
         public async Task<ActionResult> DeleteCourse([FromRoute] int id)
         {
             int a = await _courseMasterService.DeleteCourseAsync(id);

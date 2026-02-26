@@ -47,15 +47,17 @@ namespace Exam_Mgmt
 //>>>>>>> origin/Shreyash
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
-//<<<<<<< HEAD
+            //<<<<<<< HEAD
 
 
             //=======
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-//>>>>>>> origin/Vishwas
-//>>>>>>> origin/Shreyash
-//=======
+            //builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+            //>>>>>>> origin/Vishwas
+            //>>>>>>> origin/Shreyash
+            //=======   
+            builder.Services.AddScoped<StudentRepository,StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+            builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
 //>>>>>>> origin/Shreyash
 
             var app = builder.Build();
