@@ -54,18 +54,22 @@ namespace Exam_Mgmt
             builder.Services.AddScoped<SubjectSemMappingService>();
             builder.Services.AddScoped<ILookupRepository, LookupRepository>();
             //<<<<<<< HEAD
+            //<<<<<<< HEAD
 
 
             //=======
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-//>>>>>>> origin/Vishwas
-//>>>>>>> origin/Shreyash
-//=======
+            //builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+            //>>>>>>> origin/Vishwas
+            //>>>>>>> origin/Shreyash
+            //=======   
+            builder.Services.AddScoped<StudentRepository,StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
             builder.Services.AddScoped<IResultRepository, ResultRepository>();
 
+            builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
+//>>>>>>> origin/Shreyash
 
             var app = builder.Build();
 
