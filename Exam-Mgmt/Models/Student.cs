@@ -13,6 +13,7 @@ namespace Exam_Mgmt.Models
         public int CourseId { get; set; }
         public string? Phone_No { get; set; }
         public string Student_Code { get; set; }
+        public int? Created_By { get; set; }
         public int Created_By { get; set; }
         public DateTime? Created_Date { get; set; }
         public int? Modified_By { get; set; }
@@ -21,5 +22,6 @@ namespace Exam_Mgmt.Models
         public decimal Longitude { get; set; }
         public byte[]? Student_Img { get; set; }
         public char? Obsolete { get; set; }
+        public DateTime? DOB { get; set; }
     }
 }

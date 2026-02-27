@@ -9,5 +9,6 @@ namespace Exam_Mgmt.Services
         Task<List<Course>> GetActiveCourseAsync();
         //Task<List<Course>> GetAllCoursesAsync();
         Task<int> UpdateCourseAsync(int id, Course c);
+        Task<Course> GetCourseByIdAsync(int id);
     }
 }

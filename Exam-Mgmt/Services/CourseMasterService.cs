@@ -161,5 +161,27 @@ namespace Exam_Mgmt.Services
                 }
             }
         }
+
+        public async Task<Course> GetCourseByIdAsync(int id)
+        {
+            using (SqlConnection sc = new SqlConnection(cs))
+            {
+                await sc.OpenAsync();
+                using (SqlCommand cmd = new SqlCommand("sp_Course_Master", sc))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@mode", SqlDbType.VarChar, 50).Value = "coursebyid";
+                    cmd.Parameters.Add("@CourseId", SqlDbType.Int).Value = id;
+                    Course c = new Course();
+                    SqlDataReader rd = await cmd.ExecuteReaderAsync();
+                    while (await rd.ReadAsync())
+                    {
+                        c.Course_Id = Convert.ToInt32(rd["Course_Id"]);
+                        c.Course_Name = rd["Course_Name"].ToString();
+                    }
+                    return c;
+                }
+            }
+        }
     }
 }
