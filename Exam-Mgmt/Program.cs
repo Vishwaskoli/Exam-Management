@@ -88,6 +88,7 @@ namespace Exam_Mgmt
             builder.Services.AddScoped<SubjectSemMappingService>();
 //<<<<<<< HEAD
 
+            builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
 
             //=======
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
