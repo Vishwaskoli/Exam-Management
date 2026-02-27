@@ -1,6 +1,5 @@
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
-using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 
 namespace Exam_Mgmt
@@ -37,8 +36,6 @@ namespace Exam_Mgmt
                     });
             });
 
-
-            // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -48,28 +45,14 @@ namespace Exam_Mgmt
                 });
             });
 
-            // Register services
-//>>>>>>> origin/Shreyash
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
-            builder.Services.AddScoped<ILookupRepository, LookupRepository>();
-            //<<<<<<< HEAD
-            //<<<<<<< HEAD
-
-
-            //=======
-            //builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-            //>>>>>>> origin/Vishwas
-            //>>>>>>> origin/Shreyash
-            //=======   
             builder.Services.AddScoped<StudentRepository,StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
-            builder.Services.AddScoped<IResultRepository, ResultRepository>();
-
             builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
-//>>>>>>> origin/Shreyash
+            builder.Services.AddScoped<ResultRepository>();
 
             var app = builder.Build();
 
