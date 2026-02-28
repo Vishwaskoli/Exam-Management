@@ -1,4 +1,3 @@
-using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
@@ -40,36 +39,43 @@ namespace Exam_Mgmt
                     });
             });
 
+//>>>>>>> origin/chaitanya
        
 
-
-            // ? VERY IMPORTANT
-            builder.Services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "Exam Management API",
-                    Version = "v1"
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
                 });
             });
-
-            // Register services
-//>>>>>>> origin/Shreyash
-            builder.Services.AddScoped<SubjectMasterService>();
-            builder.Services.AddScoped<SubjectSemMappingService>();
+//<<<<<<< HEAD
+            builder.Services.AddSwaggerGen();
+//<<<<<<< HEAD
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
-            //<<<<<<< HEAD
 
 
+            builder.Services.AddScoped<ISemesterRepository,SemesterRepository>();
             //=======
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-//>>>>>>> origin/Vishwas
+            //HEAD
+            //Subject_Master
+            //=======
+>>>>>>>>> Temporary merge branch 2
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+//<<<<<<< HEAD
+            builder.Services.AddSwaggerGen();
+//<<<<<<< HEAD
+            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
+
+
+//<<<<<<< HEAD
 //>>>>>>> origin/Shreyash
 //=======
-            builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+            builder.Services.AddScoped<SemesterMasterService>(); 
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
-
+            //Subject_Master
+//>>>>>>> origin/chaitanya
 
             builder.Services.AddCors(options =>
             {
@@ -82,6 +88,38 @@ namespace Exam_Mgmt
                     });
             });
 
+            // ? VERY IMPORTANT
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Exam Management API",
+                    Version = "v1"
+                });
+            });
+<<<<<<<<< Temporary merge branch 1
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+            builder.Services.AddScoped<SubjectMasterService>();
+=========
+//>>>>>>> origin/Shreyash
+>>>>>>>>> Temporary merge branch 2
+
+            builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
+
+            //=======
+            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+//>>>>>>> origin/Vishwas
+//>>>>>>> origin/Shreyash
+//=======
+            builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+<<<<<<<<< Temporary merge branch 1
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
+=========
+//>>>>>>> origin/Shreyash
+>>>>>>>>> Temporary merge branch 2
 
             var app = builder.Build();
 
@@ -94,7 +132,12 @@ namespace Exam_Mgmt
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
                 });
             }
+
+
+            app.UseCors("AllowAll");
+
             app.UseCors("ReactPolicy");
+
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseCors("AllowReactApp");

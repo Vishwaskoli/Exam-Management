@@ -15,6 +15,13 @@ namespace Exam_Mgmt.Controllers
         {
             _repo = repo;
         }
+        
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var data = await _repo.GetAllAsync();
+            return Ok(data);
+        }
 
         // ✅ POST (Create / Update / Delete)
         [HttpPost]
@@ -25,12 +32,7 @@ namespace Exam_Mgmt.Controllers
             if (result == 0)
                 return BadRequest("Operation Failed");
 
-            return Ok(new
-            {
-                id = result,
-                message = "Success"
-            });
-
+            return Ok("Success");
         }
     }
 }
