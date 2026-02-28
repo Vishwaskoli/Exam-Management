@@ -17,9 +17,9 @@ namespace Exam_Mgmt.Controllers
 
         // GET ALL
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int? courseId)
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAll(courseId);
             return Ok(data);
         }
 

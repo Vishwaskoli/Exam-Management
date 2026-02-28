@@ -15,13 +15,6 @@ namespace Exam_Mgmt.Controllers
         {
             _repo = repo;
         }
-   
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            var data = await _repo.GetAllAsync();
-            return Ok(data);
-        }
 
         // ✅ POST (Create / Update / Delete)
         [HttpPost]

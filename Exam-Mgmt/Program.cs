@@ -1,3 +1,4 @@
+using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
@@ -14,6 +15,8 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddScoped<Top3RankDAL>();
+
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -36,6 +39,8 @@ namespace Exam_Mgmt
                               .AllowAnyMethod();
                     });
             });
+
+       
 
 
             // ? VERY IMPORTANT
