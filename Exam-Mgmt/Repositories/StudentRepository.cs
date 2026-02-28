@@ -46,7 +46,8 @@ namespace Exam_Mgmt.Repositories
                                 Modified_Date = rd["Modified_Date"] == DBNull.Value ? null : Convert.ToDateTime(rd["Modified_Date"]),
                                 Latitude = Convert.ToDecimal(rd["Latitude"]),
                                 Longitude = Convert.ToDecimal(rd["Longitude"]),
-                                Obsolete = Convert.ToChar(rd["Obsolete"])
+                                Obsolete = Convert.ToChar(rd["Obsolete"]),
+                                DOB = Convert.ToDateTime(rd["DOB"])
                             });
                         }
                         return students;
@@ -84,7 +85,10 @@ namespace Exam_Mgmt.Repositories
                         cmd.Parameters.Add("@Modified_By", SqlDbType.Int).Value = (object)student.Modified_By ?? DBNull.Value;
                         cmd.Parameters.Add("@Latitude", SqlDbType.Decimal, 18).Value = (object)student.Latitude ?? DBNull.Value;
                         cmd.Parameters.Add("@Longitude", SqlDbType.Decimal, 18).Value = (object)student.Longitude ?? DBNull.Value;
-
+                        cmd.Parameters.Add("@DOB", SqlDbType.DateTime)
+    .Value = student.DOB == default(DateTime)
+        ? DBNull.Value
+        : student.DOB;
 
                         if (mode == "Create")
                         {
@@ -93,7 +97,8 @@ namespace Exam_Mgmt.Repositories
                         }
                         else
                         {
-                            return await cmd.ExecuteNonQueryAsync();
+                            object result = await cmd.ExecuteScalarAsync();
+                            return result != null ? Convert.ToInt32(result) : 0;
                         }
 
                     }
