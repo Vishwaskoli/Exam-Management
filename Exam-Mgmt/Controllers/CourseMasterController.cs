@@ -10,13 +10,21 @@ namespace Exam_Mgmt.Controllers
     [ApiController]
     public class CourseMasterController : ControllerBase
     {
+        private readonly ICourseMasterService _courseMasterService;
         private readonly CourseMasterService _courseMasterService;
 
+        public CourseMasterController(ICourseMasterService service)
         public CourseMasterController(CourseMasterService service)
         {
             _courseMasterService = service;
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> GetCourses()
+        //{
+        //    var courses = await _courseMasterService.GetAllCoursesAsync();
+        //    return Ok(courses);
+        //}
         [HttpGet]
         public async Task<IActionResult> GetCourses()
         {
@@ -45,10 +53,12 @@ namespace Exam_Mgmt.Controllers
         }
 
         [HttpPost("UpdateCourse/{id}")]
+        public async Task<ActionResult> UpdateCourseName([FromBody] Course c, [FromRoute] int id)
         public async Task<ActionResult> UpdateCourseName([FromBody]Course c, [FromRoute]int id)
         {
             if (c == null || string.IsNullOrWhiteSpace(c.Course_Name))
                 return BadRequest("Valid Course Name and Modified_By are required.");
+            int a = await _courseMasterService.UpdateCourseAsync(id, c);
             int a = await _courseMasterService.UpdateCourseAsync(id,c);
             if (a > 0)
                 return Ok($"Course Updated Succesfullly to {c.Course_Name}");
@@ -57,6 +67,7 @@ namespace Exam_Mgmt.Controllers
         }
 
         [HttpPost("DeleteCourse/{id}")]
+        //public async Task<ActionResult> DeleteCourse([FromRoute] int id, [FromQuery] decimal lat, [FromQuery] decimal lon)
         public async Task<ActionResult> DeleteCourse([FromRoute] int id)
         {
             int a = await _courseMasterService.DeleteCourseAsync(id);
@@ -64,6 +75,17 @@ namespace Exam_Mgmt.Controllers
                 return Ok("Course Deleted Successfully");
             else
                 return BadRequest("Course not Deleted");
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult> CourseById(int id)
+        {
+            Course c = await _courseMasterService.GetCourseByIdAsync(id);
+            if (c != null)
+                return Ok();
+
+            else
+                return NotFound();
         }
 
     }
