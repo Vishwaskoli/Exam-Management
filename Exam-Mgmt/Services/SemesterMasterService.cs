@@ -67,6 +67,9 @@ namespace Exam_Mgmt.Services
                     }
                 }
             }  // ✅ Bug 3 fixed — SqlConnection ka closing brace add kiya
+
+            return semesters;
+        }
 //<<<<<<< Updated upstream
 //<<<<<<< Updated upstream
 //=======
@@ -75,7 +78,7 @@ namespace Exam_Mgmt.Services
 //>>>>>>> Stashed changes
 //>>>>>>> Stashed changes
 
-            return semesters;
+            //return semesters;
         }
     }
-}
+//}

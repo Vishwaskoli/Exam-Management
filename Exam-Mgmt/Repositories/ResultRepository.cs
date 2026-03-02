@@ -1,4 +1,5 @@
 ﻿using Exam_Mgmt.Models;
+using Exam_Mgmt.Models.DTOs;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
@@ -6,57 +7,69 @@ namespace Exam_Mgmt.Repositories
 {
     public class ResultRepository
     {
-        private readonly IConfiguration _config;
         private readonly string _connString;
 
         public ResultRepository(IConfiguration configuration)
         {
-            _config = configuration;
-            _connString = _config.GetConnectionString("DefaultConnection");
+            _connString = configuration.GetConnectionString("DefaultConnection");
         }
 
-        // ✅ Get All Present Records
-        public async Task<List<Result>> GetAllResultsAsync()
+        private string CalculateGrade(decimal percentage)
         {
-            List<Result> list = new List<Result>();
+            if (percentage >= 75) return "A";
+            if (percentage >= 60) return "B";
+            if (percentage >= 50) return "C";
+            if (percentage >= 40) return "D";
+            return "F";
+        }
 
-            using (SqlConnection con = new SqlConnection(_connString))
+        // ✅ Get All Results
+        public async Task<List<ResultListDto>> GetAllResultsAsync()
+        {
+            List<ResultListDto> list = new();
+
+            using SqlConnection con = new(_connString);
+            using SqlCommand cmd = new("sp_ResultCRUD", con);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Mode", "readall");
+
+            await con.OpenAsync();
+            using SqlDataReader dr = await cmd.ExecuteReaderAsync();
+
+            while (await dr.ReadAsync())
             {
-                SqlCommand cmd = new SqlCommand(
-                    "SELECT * FROM Result_Master WHERE Obsolete='N'", con);
+                int obtained = Convert.ToInt32(dr["Obtained_Marks"]);
+                int total = Convert.ToInt32(dr["Total_Marks"]);
+                decimal percentage = total == 0 ? 0 : (obtained * 100m / total);
 
-                await con.OpenAsync();
-                SqlDataReader dr = await cmd.ExecuteReaderAsync();
-
-                while (await dr.ReadAsync())
+                list.Add(new ResultListDto
                 {
-                    list.Add(new Result
-                    {
-                        ResultId = Convert.ToInt32(dr["Res_Id"]),
-                        CourseId = Convert.ToInt32(dr["Course_Id"]),
-                        SemId = Convert.ToInt32(dr["Sem_Id"]),
-                        StudentId = Convert.ToInt32(dr["Student_Id"]),
-                        ExamId = Convert.ToInt32(dr["Exam_Id"]),
-                        SubjectId = Convert.ToInt32(dr["Subject_Id"]),
-                        ObtainedMarks = Convert.ToInt32(dr["Obtained_Marks"]),
-                        TotalMarks = Convert.ToInt32(dr["Total_Marks"]),
-                        CreatedBy = Convert.ToInt32(dr["Created_By"]),
-                        CreatedDate = Convert.ToDateTime(dr["Created_Date"]),
-                        Longitude = Convert.ToDecimal(dr["Longitude"]),
-                        Latitude = Convert.ToDecimal(dr["Latitude"]),
-                        Obsolete = Convert.ToChar(dr["Obsolete"])
-                    });
-                }
+                    ResultId = Convert.ToInt32(dr["Res_Id"]),
+                    StudentName = dr["StudentName"].ToString(),
+                    ExamName = dr["Exam_Name"].ToString(),
+                    SubjectName = dr["Subject_Name"].ToString(),
+                    ObtainedMarks = obtained,
+                    TotalMarks = total,
+                    Percentage = percentage,
+                    Grade = CalculateGrade(percentage)
+                });
             }
+
             return list;
         }
 
-        // ✅ Single Method for CRUD
+        // ✅ Transaction Safe Execute
         public async Task<int> ExecuteAsync(Result result, string mode)
         {
-            using (SqlConnection con = new SqlConnection(_connString))
+            using SqlConnection con = new(_connString);
+            await con.OpenAsync();
+
+            using SqlTransaction transaction = con.BeginTransaction();
+
+            try
             {
-                SqlCommand cmd = new SqlCommand("sp_ResultCRUD", con);
+                using SqlCommand cmd = new("sp_ResultCRUD", con, transaction);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Mode", mode);
@@ -73,10 +86,56 @@ namespace Exam_Mgmt.Repositories
                 cmd.Parameters.AddWithValue("@Longitude", result.Longitude ?? 0);
                 cmd.Parameters.AddWithValue("@Latitude", result.Latitude ?? 0);
 
-                await con.OpenAsync();
+                int rows = await cmd.ExecuteNonQueryAsync();
 
-                return await cmd.ExecuteNonQueryAsync();
+                transaction.Commit();
+                return rows;
             }
+            catch
+            {
+                transaction.Rollback();
+                throw;
+            }
+        }
+
+        // ✅ Report
+        public async Task<List<dynamic>> GetReport(int courseId, int semId)
+        {
+            List<dynamic> list = new();
+
+            using SqlConnection con = new(_connString);
+            using SqlCommand cmd = new(@"
+                SELECT 
+                    s.Stu_FirstName + ' ' + ISNULL(s.Stu_LastName,'') AS StudentName,
+                    SUM(r.Obtained_Marks) AS TotalObtained,
+                    SUM(r.Total_Marks) AS TotalMarks,
+                    (SUM(r.Obtained_Marks)*100.0/SUM(r.Total_Marks)) AS Percentage
+                FROM Result_Master r
+                JOIN Student_Master s ON r.Student_Id=s.Student_Id
+                WHERE r.Course_Id=@CourseId
+                AND r.Sem_Id=@SemId
+                AND r.Obsolete='N'
+                GROUP BY s.Stu_FirstName, s.Stu_LastName
+                ORDER BY Percentage DESC", con);
+
+            cmd.Parameters.AddWithValue("@CourseId", courseId);
+            cmd.Parameters.AddWithValue("@SemId", semId);
+
+            await con.OpenAsync();
+            SqlDataReader dr = await cmd.ExecuteReaderAsync();
+
+            while (await dr.ReadAsync())
+            {
+                list.Add(new
+                {
+                    StudentName = dr["StudentName"].ToString(),
+                    TotalObtained = Convert.ToInt32(dr["TotalObtained"]),
+                    TotalMarks = Convert.ToInt32(dr["TotalMarks"]),
+                    Percentage = Math.Round(Convert.ToDecimal(dr["Percentage"]), 1)
+                });
+            }
+
+            return list;
         }
     }
 }

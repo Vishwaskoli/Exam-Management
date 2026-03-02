@@ -3,28 +3,159 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\resultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\resultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|7ae516f6-6e05-40e4-80fd-16902c2203c9MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Exam_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\exammastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\exammastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\services\\exammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\exammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\services\\iexammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\iexammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\semestermastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\semestermastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\semesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\semesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\isemesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\isemesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|faecf7b2-ada3-41ba-bad8-0c9f8d9b17ceMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Semester_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|673e227d-07ba-4f26-936c-6105def50beaMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_ResultCRUD.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\resultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\resultrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|6791b5a1-45b1-4042-a705-0869a08f0a4fMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Student_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|dc30c1cc-96d6-4bf5-b75e-efca91bae4fcMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_SemesterCRUD.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\models\\dtos\\resultlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\dtos\\resultlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\resultmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\resultmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\services\\semestermasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\semestermasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\models\\dtos\\resultviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\dtos\\resultviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\models\\dtos\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\dtos\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|acc423fa-d169-47a4-a762-6c54483b1c40MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Subject_Sem_Mapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|b34e134a-28f5-422b-9879-bbcddfea27a1MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Subject_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|00fb4b29-545d-4a5b-b13e-4f79de0b4b35MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_StudentMaster.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|22cefa93-4c01-4027-a3bb-6a17d0b78f02MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Report_Top3Ranks_CourseWise.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|9ba5d307-da9f-4aa3-9d3a-00b58905f93bMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_InsertCourseSemMapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e4a060aa-bdda-4936-b52c-2832a1db0c0eMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Insert_CourseSemMapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|de9ab700-376a-4a5c-89e9-f9041efe2a6fMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetCourseSemMappingById.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|beb3ed81-c550-4031-94b4-f3d86f9794deMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetAllCourseSemMapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|474a944a-510c-4edf-a0fe-75753127d30eMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetAllCourse.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|9dfb7c1b-352c-4cc1-ac0f-c74d39547b29MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Get_CourseSemMapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|f7a564a7-8eae-406c-9000-928d95ff13d5MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_CreateCourse.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|57717878-b988-46fd-bff6-f7618f4432e1MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_CourseSemMapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|4c01e777-f66b-4171-9eb7-1f5acbe9d391MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Course_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|7ced6905-eea3-46cb-b250-8a1a246bc977MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.GetTop3Ranks.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|91ad326b-c8d8-4a10-9840-f5dc216841cbMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Subject_Sem_Mapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|5e03338f-963c-4585-9d64-e33cb479e405MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Subject_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c17c57cd-e6e9-421c-b61d-84c1b4a5d193MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Result_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|fd917c06-3c8b-4fc9-9535-7a1802497998MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Exam_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|3c49d42e-5b97-45a5-b344-317f262770ecMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Course_Sem_Mapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c5be42d1-0a50-4f45-b668-130047de69edMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Course_Master.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\project.nuget.cache||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +169,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,33 +201,425 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SubjectSemMappingController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubjectSemMappingController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
+              "RelativeToolTip": "Controllers\\SubjectSemMappingController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T08:00:24.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExamMasterService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Services\\ExamMasterService.cs",
+              "RelativeDocumentMoniker": "Services\\ExamMasterService.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Services\\ExamMasterService.cs",
+              "RelativeToolTip": "Services\\ExamMasterService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T07:01:51.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IExamMasterService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Services\\IExamMasterService.cs",
+              "RelativeDocumentMoniker": "Services\\IExamMasterService.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Services\\IExamMasterService.cs",
+              "RelativeToolTip": "Services\\IExamMasterService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T07:00:53.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExamMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ExamMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ExamMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ExamMasterController.cs",
+              "RelativeToolTip": "Controllers\\ExamMasterController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAcwHYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T06:57:32.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ISemesterRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\ISemesterRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ISemesterRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\ISemesterRepository.cs",
+              "RelativeToolTip": "Repositories\\ISemesterRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:22:57.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ResultListDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\DTOs\\ResultListDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ResultListDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\DTOs\\ResultListDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\ResultListDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T05:17:15.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ResultViewDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\DTOs\\ResultViewDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ResultViewDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\DTOs\\ResultViewDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\ResultViewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T04:31:38.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\DTOs\\ResultDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\ResultDto.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\DTOs\\ResultDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\ResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T04:16:35.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Create dbo.sp_Subject_Sem_Mapping.sql",
+              "DocumentMoniker": "acc423fa-d169-47a4-a762-6c54483b1c40MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Subject_Sem_Mapping.sql",
+              "ToolTip": "acc423fa-d169-47a4-a762-6c54483b1c40MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Subject_Sem_Mapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:51:53.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create dbo.sp_Subject_Master.sql",
+              "DocumentMoniker": "b34e134a-28f5-422b-9879-bbcddfea27a1MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Subject_Master.sql",
+              "ToolTip": "b34e134a-28f5-422b-9879-bbcddfea27a1MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Subject_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:51:40.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create dbo.sp_StudentMaster.sql",
+              "DocumentMoniker": "00fb4b29-545d-4a5b-b13e-4f79de0b4b35MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_StudentMaster.sql",
+              "ToolTip": "00fb4b29-545d-4a5b-b13e-4f79de0b4b35MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_StudentMaster.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:51:27.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create dbo.sp_SemesterCRUD.sql",
+              "DocumentMoniker": "dc30c1cc-96d6-4bf5-b75e-efca91bae4fcMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_SemesterCRUD.sql",
+              "ToolTip": "dc30c1cc-96d6-4bf5-b75e-efca91bae4fcMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_SemesterCRUD.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:51:13.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create dbo.sp_ResultCRUD.sql",
+              "DocumentMoniker": "673e227d-07ba-4f26-936c-6105def50beaMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_ResultCRUD.sql",
+              "ToolTip": "673e227d-07ba-4f26-936c-6105def50beaMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_ResultCRUD.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:50:59.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Create dbo.SP_Report_Top3Ranks_CourseWise.sql",
+              "DocumentMoniker": "22cefa93-4c01-4027-a3bb-6a17d0b78f02MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Report_Top3Ranks_CourseWise.sql",
+              "ToolTip": "22cefa93-4c01-4027-a3bb-6a17d0b78f02MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Report_Top3Ranks_CourseWise.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:50:45.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create dbo.sp_InsertCourseSemMapping.sql",
+              "DocumentMoniker": "9ba5d307-da9f-4aa3-9d3a-00b58905f93bMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_InsertCourseSemMapping.sql",
+              "ToolTip": "9ba5d307-da9f-4aa3-9d3a-00b58905f93bMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_InsertCourseSemMapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:50:28.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Create dbo.SP_Insert_CourseSemMapping.sql",
+              "DocumentMoniker": "e4a060aa-bdda-4936-b52c-2832a1db0c0eMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Insert_CourseSemMapping.sql",
+              "ToolTip": "e4a060aa-bdda-4936-b52c-2832a1db0c0eMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Insert_CourseSemMapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:50:15.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Create dbo.sp_GetCourseSemMappingById.sql",
+              "DocumentMoniker": "de9ab700-376a-4a5c-89e9-f9041efe2a6fMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetCourseSemMappingById.sql",
+              "ToolTip": "de9ab700-376a-4a5c-89e9-f9041efe2a6fMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetCourseSemMappingById.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:50:00.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Create dbo.sp_GetAllCourseSemMapping.sql",
+              "DocumentMoniker": "beb3ed81-c550-4031-94b4-f3d86f9794deMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetAllCourseSemMapping.sql",
+              "ToolTip": "beb3ed81-c550-4031-94b4-f3d86f9794deMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetAllCourseSemMapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:49:48.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Create dbo.sp_GetAllCourse.sql",
+              "DocumentMoniker": "474a944a-510c-4edf-a0fe-75753127d30eMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetAllCourse.sql",
+              "ToolTip": "474a944a-510c-4edf-a0fe-75753127d30eMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_GetAllCourse.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:49:34.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Create dbo.SP_Get_CourseSemMapping.sql",
+              "DocumentMoniker": "9dfb7c1b-352c-4cc1-ac0f-c74d39547b29MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Get_CourseSemMapping.sql",
+              "ToolTip": "9dfb7c1b-352c-4cc1-ac0f-c74d39547b29MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_Get_CourseSemMapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:49:20.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create dbo.sp_Exam_Master.sql",
+              "DocumentMoniker": "7ae516f6-6e05-40e4-80fd-16902c2203c9MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Exam_Master.sql",
+              "ToolTip": "7ae516f6-6e05-40e4-80fd-16902c2203c9MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Exam_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:49:04.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Create dbo.sp_CreateCourse.sql",
+              "DocumentMoniker": "f7a564a7-8eae-406c-9000-928d95ff13d5MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_CreateCourse.sql",
+              "ToolTip": "f7a564a7-8eae-406c-9000-928d95ff13d5MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_CreateCourse.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:48:49.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Create dbo.SP_CourseSemMapping.sql",
+              "DocumentMoniker": "57717878-b988-46fd-bff6-f7618f4432e1MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_CourseSemMapping.sql",
+              "ToolTip": "57717878-b988-46fd-bff6-f7618f4432e1MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.SP_CourseSemMapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:48:33.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Create dbo.sp_Course_Master.sql",
+              "DocumentMoniker": "4c01e777-f66b-4171-9eb7-1f5acbe9d391MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Course_Master.sql",
+              "ToolTip": "4c01e777-f66b-4171-9eb7-1f5acbe9d391MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.sp_Course_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:48:16.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Create dbo.GetTop3Ranks.sql",
+              "DocumentMoniker": "7ced6905-eea3-46cb-b250-8a1a246bc977MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.GetTop3Ranks.sql",
+              "ToolTip": "7ced6905-eea3-46cb-b250-8a1a246bc977MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.GetTop3Ranks.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:48:01.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Create dbo.Subject_Sem_Mapping.sql",
+              "DocumentMoniker": "91ad326b-c8d8-4a10-9840-f5dc216841cbMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Subject_Sem_Mapping.sql",
+              "ToolTip": "91ad326b-c8d8-4a10-9840-f5dc216841cbMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Subject_Sem_Mapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:47:44.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Create dbo.Subject_Master.sql",
+              "DocumentMoniker": "5e03338f-963c-4585-9d64-e33cb479e405MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Subject_Master.sql",
+              "ToolTip": "5e03338f-963c-4585-9d64-e33cb479e405MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Subject_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:47:27.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create dbo.Student_Master.sql",
+              "DocumentMoniker": "6791b5a1-45b1-4042-a705-0869a08f0a4fMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Student_Master.sql",
+              "ToolTip": "6791b5a1-45b1-4042-a705-0869a08f0a4fMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Student_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:47:10.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create dbo.Semester_Master.sql",
+              "DocumentMoniker": "faecf7b2-ada3-41ba-bad8-0c9f8d9b17ceMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Semester_Master.sql",
+              "ToolTip": "faecf7b2-ada3-41ba-bad8-0c9f8d9b17ceMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Semester_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:46:55.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Create dbo.Result_Master.sql",
+              "DocumentMoniker": "c17c57cd-e6e9-421c-b61d-84c1b4a5d193MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Result_Master.sql",
+              "ToolTip": "c17c57cd-e6e9-421c-b61d-84c1b4a5d193MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Result_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:46:30.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Create dbo.Exam_Master.sql",
+              "DocumentMoniker": "fd917c06-3c8b-4fc9-9535-7a1802497998MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Exam_Master.sql",
+              "ToolTip": "fd917c06-3c8b-4fc9-9535-7a1802497998MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Exam_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:45:55.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Create dbo.Course_Sem_Mapping.sql",
+              "DocumentMoniker": "3c49d42e-5b97-45a5-b344-317f262770ecMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Course_Sem_Mapping.sql",
+              "ToolTip": "3c49d42e-5b97-45a5-b344-317f262770ecMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Course_Sem_Mapping.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:45:25.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Create dbo.Course_Master.sql",
+              "DocumentMoniker": "c5be42d1-0a50-4f45-b668-130047de69edMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Course_Master.sql",
+              "ToolTip": "c5be42d1-0a50-4f45-b668-130047de69edMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Course_Master.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-28T03:45:02.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SemesterMasterService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Services\\SemesterMasterService.cs",
+              "RelativeDocumentMoniker": "Services\\SemesterMasterService.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Services\\SemesterMasterService.cs",
+              "RelativeToolTip": "Services\\SemesterMasterService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAADwv1MAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:47:59.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SemesterRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\SemesterRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\SemesterRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\SemesterRepository.cs",
+              "RelativeToolTip": "Repositories\\SemesterRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwCwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:47:45.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SemesterMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SemesterMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SemesterMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SemesterMasterController.cs",
+              "RelativeToolTip": "Controllers\\SemesterMasterController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:47:34.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "project.assets.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.assets.json",
+              "RelativeDocumentMoniker": "obj\\project.assets.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.assets.json",
+              "RelativeToolTip": "obj\\project.assets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-27T11:46:11.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "project.nuget.cache",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache",
+              "RelativeDocumentMoniker": "obj\\project.nuget.cache",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache",
+              "RelativeToolTip": "obj\\project.nuget.cache",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002368|",
+              "WhenOpened": "2026-02-27T11:46:06.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA4wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T11:39:57.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "CourseMasterController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseMasterController.cs",
               "RelativeDocumentMoniker": "Controllers\\CourseMasterController.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseMasterController.cs",
               "RelativeToolTip": "Controllers\\CourseMasterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T11:38:12.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T11:38:12.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "StudentRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\StudentRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\StudentRepository.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\StudentRepository.cs",
               "RelativeToolTip": "Repositories\\StudentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAqwI4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T11:38:05.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T11:38:05.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 45,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -108,20 +631,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "ResultRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\ResultRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ResultRepository.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\ResultRepository.cs",
               "RelativeToolTip": "Repositories\\ResultRepository.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowDIAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAiwDsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T08:49:13.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T08:49:13.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SQLQuery1.sql",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "SQLQuery1.sql",
@@ -132,28 +654,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "ResultMasterController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ResultMasterController.cs",
               "RelativeDocumentMoniker": "Controllers\\ResultMasterController.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ResultMasterController.cs",
               "RelativeToolTip": "Controllers\\ResultMasterController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowC4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwCgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T08:40:04.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "StudentController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\StudentController.cs",
               "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAQwGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAiwGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T08:28:01.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T08:28:01.689Z"
             }
           ]
         }

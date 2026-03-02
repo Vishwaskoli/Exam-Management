@@ -34,6 +34,37 @@ namespace Exam_Mgmt.Repositories
             }
             return list;
         }
+        public async Task<List<Semester>> GetByCourse(int courseId)
+        {
+            List<Semester> list = new();
+
+            using SqlConnection con = new(_cs);
+            using SqlCommand cmd = new(@"
+        SELECT s.Sem_Id, s.Sem_Name
+        FROM Semester_Master s
+        INNER JOIN Course_Sem_Mapping csm
+            ON s.Sem_Id = csm.Sem_Id
+        WHERE csm.Course_Id = @id
+        AND s.Obsolete = 'N'
+        AND csm.Obsolete = 'N'
+    ", con);
+
+            cmd.Parameters.AddWithValue("@id", courseId);
+
+            await con.OpenAsync();
+            using SqlDataReader dr = await cmd.ExecuteReaderAsync();
+
+            while (await dr.ReadAsync())
+            {
+                list.Add(new Semester
+                {
+                    Sem_Id = Convert.ToInt32(dr["Sem_Id"]),
+                    Sem_Name = dr["Sem_Name"].ToString()
+                });
+            }
+
+            return list;
+        }
         public async Task<Semester?> GetByIdAsync(int id)
         {
             using SqlConnection con = new SqlConnection(_cs);
@@ -71,6 +102,7 @@ namespace Exam_Mgmt.Repositories
 
             await con.OpenAsync();
             var result = await cmd.ExecuteScalarAsync();
+            return (int)result;
 
             return Convert.ToInt32(result);
         }
@@ -91,6 +123,7 @@ namespace Exam_Mgmt.Repositories
             return Convert.ToInt32(result);
         }
 
+        //public async Task<int> DeleteAsync(int id, int modifiedBy)
         public async Task<int> DeleteAsync(int id, int modifiedBy, decimal? latitude, decimal? longitude)
         {
             using SqlConnection conn = new SqlConnection(_cs);
@@ -119,6 +152,10 @@ namespace Exam_Mgmt.Repositories
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@Mode", mode);
+            cmd.Parameters.AddWithValue("@Sem_Id", semester.Sem_Id == 0 ? DBNull.Value : semester.Sem_Id);
+            cmd.Parameters.AddWithValue("@Sem_Name", semester.Sem_Name ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@Created_By", semester.Created_By);
+            cmd.Parameters.AddWithValue("@Modified_By", semester.Modified_By);
 
             cmd.Parameters.AddWithValue("@Sem_Id",
                 semester.Sem_Id == 0 ? DBNull.Value : semester.Sem_Id);

@@ -14,7 +14,6 @@ namespace Exam_Mgmt.Models
         public string? Phone_No { get; set; }
         public string Student_Code { get; set; }
         public int? Created_By { get; set; }
-        public int Created_By { get; set; }
         public DateTime? Created_Date { get; set; }
         public int? Modified_By { get; set; }
         public DateTime? Modified_Date { get; set; }

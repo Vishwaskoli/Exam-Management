@@ -42,6 +42,8 @@ namespace Exam_Mgmt.Services
                         Created_By = Convert.ToInt32(reader["Created_By"]),
                         Modified_Date = reader["Modified_Date"] == DBNull.Value ? null : (DateTime?)reader["Modified_Date"],
                         Modified_By = reader["Modified_By"] == DBNull.Value ? null : Convert.ToInt32(reader["Modified_By"]),
+                        Latitude = reader["Latitude"] == DBNull.Value ? null : (decimal?)reader["Latitude"],
+                        Longitude = reader["Longitude"] == DBNull.Value ? null : (decimal?)reader["Longitude"],
 
                         Obsolete = reader["Obsolete"].ToString()
                     });
@@ -62,6 +64,8 @@ namespace Exam_Mgmt.Services
                 cmd.Parameters.AddWithValue("@Mode", "Add");
                 cmd.Parameters.AddWithValue("@Subject_Name", subject.Subject_Name);
                 cmd.Parameters.AddWithValue("@Created_By", subject.Created_By);
+                cmd.Parameters.AddWithValue("@Latitude", subject.Latitude ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Longitude", subject.Longitude ?? (object)DBNull.Value);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -80,6 +84,8 @@ namespace Exam_Mgmt.Services
                 cmd.Parameters.AddWithValue("@Subject_Id", subject.Subject_Id);
                 cmd.Parameters.AddWithValue("@Subject_Name", subject.Subject_Name);
                 cmd.Parameters.AddWithValue("@Modified_By", subject.Modified_By);
+                cmd.Parameters.AddWithValue("@Latitude", subject.Latitude ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Longitude", subject.Longitude ?? (object)DBNull.Value);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
