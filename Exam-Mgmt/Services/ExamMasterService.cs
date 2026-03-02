@@ -39,6 +39,13 @@ namespace Exam_Mgmt.Services
 
                             SubjectIds = reader["SubjectIds"]?.ToString(),
                             ExamDates = reader["ExamDates"]?.ToString(),
+                            ExamStartTimes = reader["ExamStartTimes"] == DBNull.Value
+                    ? null
+                    : reader["ExamStartTimes"].ToString(),
+
+                            Durations = reader["Durations"] == DBNull.Value
+                    ? null
+                    : reader["Durations"].ToString(),
                             TotalMarks = reader["TotalMarks"]?.ToString(),
 
                             Created_By = reader["Created_By"] == DBNull.Value
@@ -47,7 +54,8 @@ namespace Exam_Mgmt.Services
 
                             Modified_By = reader["Modified_By"] == DBNull.Value
                                             ? null
-                                            : Convert.ToInt32(reader["Modified_By"])
+                                            : Convert.ToInt32(reader["Modified_By"]),
+
                         });
                     }
                 }
@@ -83,7 +91,12 @@ namespace Exam_Mgmt.Services
                     cmd.Parameters.AddWithValue("@SubjectIds", model.SubjectIds ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@ExamDates", model.ExamDates ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@TotalMarks", model.TotalMarks ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@ExamStartTimes", model.ExamStartTimes ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Durations", model.Durations ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Created_By", model.Created_By ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@Modified_By", model.Modified_By ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Latitude", model.Latitude ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Longitude", model.Longitude ?? (object)DBNull.Value);
 
                     await conn.OpenAsync();
 
@@ -124,8 +137,12 @@ namespace Exam_Mgmt.Services
                 cmd.Parameters.AddWithValue("@SubjectIds", (object)model.SubjectIds ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@ExamDates", (object)model.ExamDates ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TotalMarks", (object)model.TotalMarks ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@ExamStartTimes", model.ExamStartTimes ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Durations", model.Durations ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Created_By", (object)model.Created_By ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@Modified_By", (object)model.Modified_By ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Latitude", model.Latitude ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@Longitude", model.Longitude ?? (object)DBNull.Value);
 
                 await con.OpenAsync();
 

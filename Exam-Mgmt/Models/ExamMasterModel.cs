@@ -12,6 +12,10 @@
         public string TotalMarks { get; set; }           // CSV of marks (Add/Update)
         public int? Created_By { get; set; }             // Required for Add
         public int? Modified_By { get; set; }            // Required for Update/Delete
+        public string? ExamStartTimes { get; set; }
+        public string? Durations { get; set; }
+        public decimal? Latitude { get; set; }
+        public decimal? Longitude { get; set; }
     }
     public class ExamMasterDeleteModel
     {
