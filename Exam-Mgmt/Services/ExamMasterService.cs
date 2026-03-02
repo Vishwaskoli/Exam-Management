@@ -33,14 +33,17 @@ namespace Exam_Mgmt.Services
                 result.Add(new ExamMasterModel
                 {
                     Exam_Id = reader.GetInt32(reader.GetOrdinal("Exam_Id")),
-                    Exam_Name = reader.GetString(reader.GetOrdinal("Exam_Name")),
-                    Course_Id = reader.GetInt32(reader.GetOrdinal("Course_Id")),
-                    Sem_Id = reader.GetInt32(reader.GetOrdinal("Sem_Id")),
-                    SubjectIds = reader["Subject_Id"].ToString(),
-                    ExamDates = reader["Exam_Date"].ToString(),
-                    TotalMarks = reader["Total_Marks"].ToString(),
-                    Created_By = reader["Created_By"] as int?,
-                    Modified_By = reader["Modified_By"] as int?
+                    Exam_Name = reader["Exam_Name"]?.ToString(),
+                    Course_Id = Convert.ToInt32(reader["Course_Id"]),
+                    Sem_Id = Convert.ToInt32(reader["Sem_Id"]),
+
+                    // 🔥 IMPORTANT FIX
+                    SubjectIds = reader["SubjectIds"]?.ToString(),
+                    ExamDates = reader["ExamDates"]?.ToString(),
+                    TotalMarks = reader["TotalMarks"]?.ToString(),
+
+                    Created_By = reader["Created_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Created_By"]),
+                    Modified_By = reader["Modified_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Modified_By"])
                 });
             }
 

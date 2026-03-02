@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Exam_Mgmt.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace Exam_Mgmt.Controllers
 {
@@ -11,12 +12,19 @@ namespace Exam_Mgmt.Controllers
     public class SubjectSemMappingController : ControllerBase
     {
         private readonly SubjectSemMappingService _service;
+        private readonly IConfiguration _configuration;
 
-        public SubjectSemMappingController(SubjectSemMappingService service)
+        //public SubjectSemMappingController(SubjectSemMappingService service)
+        //{
+        //    _service = service;
+        //}
+        public SubjectSemMappingController(
+    SubjectSemMappingService service,
+    IConfiguration configuration)
         {
             _service = service;
+            _configuration = configuration;
         }
-
         // GET: api/SubjectSemMapping
         [HttpGet]
         public ActionResult<List<SubjectSemMapping>> GetAll()
@@ -38,7 +46,36 @@ namespace Exam_Mgmt.Controllers
                          && m.Obsolete == "N")
                 .ToList();
 
-            return Ok(mappings);
+            var subjects = new List<object>();
+
+            using (SqlConnection con = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+            {
+                con.Open();
+
+                foreach (var map in mappings)
+                {
+                    using (SqlCommand cmd = new SqlCommand(
+                        "SELECT Subject_Id, Subject_Name FROM Subject_Master WHERE Subject_Id=@id AND Obsolete='N'", con))
+                    {
+                        cmd.Parameters.AddWithValue("@id", map.Sub_Id);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                subjects.Add(new
+                                {
+                                    subject_Id = reader["Subject_Id"],
+                                    subject_Name = reader["Subject_Name"]
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+
+            return Ok(subjects);
         }
 
         // POST: api/SubjectSemMapping/Create
