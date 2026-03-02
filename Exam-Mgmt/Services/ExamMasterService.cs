@@ -26,6 +26,32 @@ namespace Exam_Mgmt.Services
 
             await con.OpenAsync();
 
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        result.Add(new ExamMasterModel
+                        {
+                            Exam_Id = reader.GetInt32(reader.GetOrdinal("Exam_Id")),
+                            Exam_Name = reader.GetString(reader.GetOrdinal("Exam_Name")),
+                            Course_Id = reader.GetInt32(reader.GetOrdinal("Course_Id")),
+                            Sem_Id = reader.GetInt32(reader.GetOrdinal("Sem_Id")),
+
+                            SubjectIds = reader["SubjectIds"]?.ToString(),
+                            ExamDates = reader["ExamDates"]?.ToString(),
+                            TotalMarks = reader["TotalMarks"]?.ToString(),
+
+                            Created_By = reader["Created_By"] == DBNull.Value
+                                            ? null
+                                            : Convert.ToInt32(reader["Created_By"]),
+
+                            Modified_By = reader["Modified_By"] == DBNull.Value
+                                            ? null
+                                            : Convert.ToInt32(reader["Modified_By"])
+                        });
+                    }
+                }
+            }
             using var reader = await cmd.ExecuteReaderAsync();
 
             while (await reader.ReadAsync())
