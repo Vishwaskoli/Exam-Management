@@ -46,6 +46,11 @@ namespace Exam_Mgmt.Repositories
                 list.Add(new ResultListDto
                 {
                     ResultId = Convert.ToInt32(dr["Res_Id"]),
+                    CourseId = Convert.ToInt32(dr["Course_Id"]),
+                    SemId = Convert.ToInt32(dr["Sem_Id"]),
+                    StudentId = Convert.ToInt32(dr["Student_Id"]),
+                    ExamId = Convert.ToInt32(dr["Exam_Id"]),
+                    SubjectId = Convert.ToInt32(dr["Subject_Id"]),
                     StudentName = dr["StudentName"].ToString(),
                     ExamName = dr["Exam_Name"].ToString(),
                     SubjectName = dr["Subject_Name"].ToString(),

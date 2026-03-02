@@ -140,18 +140,23 @@ begin
     end
 
     else if @Mode='readall'
-    begin
-        select 
-            r.Res_Id,
-            s.Stu_First_Name + ' ' + isnull(s.Stu_Last_Name,'') as StudentName,
-            e.Exam_Name,
-            sub.Subject_Name,
-            r.Obtained_Marks,
-            r.Total_Marks
-        from Result_Master r
-        join Student_Master s on r.Student_Id=s.Student_Id
-        join Exam_Master e on r.Exam_Id=e.Exam_Id
-        join Subject_Master sub on r.Subject_Id=sub.Subject_Id
-        where r.Obsolete='N';
-    end
+begin
+    select 
+        r.Res_Id,
+        r.Course_Id,
+        r.Sem_Id,
+        r.Student_Id,
+        r.Exam_Id,
+        r.Subject_Id,
+        s.Stu_First_Name + ' ' + isnull(s.Stu_Last_Name,'') as StudentName,
+        e.Exam_Name,
+        sub.Subject_Name,
+        r.Obtained_Marks,
+        r.Total_Marks
+    from Result_Master r
+    join Student_Master s on r.Student_Id=s.Student_Id
+    join Exam_Master e on r.Exam_Id=e.Exam_Id
+    join Subject_Master sub on r.Subject_Id=sub.Subject_Id
+    where r.Obsolete='N';
+end
 end

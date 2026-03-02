@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj": {}
   },
   "projects": {
@@ -13,29 +12,12 @@
         "projectPath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\",
-=======
-    "D:\\Shreyash\\exam\\Exam-Mgmt\\Exam-Mgmt.csproj": {}
-  },
-  "projects": {
-    "D:\\Shreyash\\exam\\Exam-Mgmt\\Exam-Mgmt.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Shreyash\\exam\\Exam-Mgmt\\Exam-Mgmt.csproj",
-        "projectName": "Exam-Mgmt",
-        "projectPath": "D:\\Shreyash\\exam\\Exam-Mgmt\\Exam-Mgmt.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "D:\\Shreyash\\exam\\Exam-Mgmt\\obj\\",
->>>>>>> origin/Shreyash
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/Shreyash
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -61,12 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-<<<<<<< HEAD
         },
         "SdkAnalysisLevel": "10.0.100"
-=======
-        }
->>>>>>> origin/Shreyash
       },
       "frameworks": {
         "net8.0": {
@@ -76,13 +54,10 @@
               "target": "Package",
               "version": "[6.1.4, )"
             },
-<<<<<<< HEAD
-=======
             "Microsoft.OpenApi": {
               "target": "Package",
               "version": "[1.2.3, )"
             },
->>>>>>> origin/Shreyash
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -107,11 +82,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
->>>>>>> origin/Shreyash
         }
       }
     }

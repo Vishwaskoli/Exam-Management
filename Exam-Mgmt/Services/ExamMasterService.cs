@@ -50,31 +50,33 @@ namespace Exam_Mgmt.Services
                                             : Convert.ToInt32(reader["Modified_By"])
                         });
                     }
-                }
-            }
-            using var reader = await cmd.ExecuteReaderAsync();
-
-            while (await reader.ReadAsync())
-            {
-                result.Add(new ExamMasterModel
-                {
-                    Exam_Id = reader.GetInt32(reader.GetOrdinal("Exam_Id")),
-                    Exam_Name = reader["Exam_Name"]?.ToString(),
-                    Course_Id = Convert.ToInt32(reader["Course_Id"]),
-                    Sem_Id = Convert.ToInt32(reader["Sem_Id"]),
-
-                    // 🔥 IMPORTANT FIX
-                    SubjectIds = reader["SubjectIds"]?.ToString(),
-                    ExamDates = reader["ExamDates"]?.ToString(),
-                    TotalMarks = reader["TotalMarks"]?.ToString(),
-
-                    Created_By = reader["Created_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Created_By"]),
-                    Modified_By = reader["Modified_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Modified_By"])
-                });
+                return result;
             }
 
-            return result;
-        }
+            }
+        //    using var reader = await cmd.ExecuteReaderAsync();
+
+        //    while (await reader.ReadAsync())
+        //    {
+        //        result.Add(new ExamMasterModel
+        //        {
+        //            Exam_Id = reader.GetInt32(reader.GetOrdinal("Exam_Id")),
+        //            Exam_Name = reader["Exam_Name"]?.ToString(),
+        //            Course_Id = Convert.ToInt32(reader["Course_Id"]),
+        //            Sem_Id = Convert.ToInt32(reader["Sem_Id"]),
+
+        //            // 🔥 IMPORTANT FIX
+        //            SubjectIds = reader["SubjectIds"]?.ToString(),
+        //            ExamDates = reader["ExamDates"]?.ToString(),
+        //            TotalMarks = reader["TotalMarks"]?.ToString(),
+
+        //            Created_By = reader["Created_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Created_By"]),
+        //            Modified_By = reader["Modified_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Modified_By"])
+        //        });
+        //    }
+
+        //    
+        //}
 
         // ================= GET BY COURSE + SEM =================
         public async Task<List<ExamMasterModel>> GetByCourseSemAsync(int courseId, int semId)
