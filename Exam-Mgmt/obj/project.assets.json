@@ -1874,6 +1874,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.Data.SqlClient >= 6.1.4",
+      "Microsoft.OpenApi >= 1.2.3",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -1929,6 +1930,10 @@
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[6.1.4, )"
+          },
+          "Microsoft.OpenApi": {
+            "target": "Package",
+            "version": "[1.2.3, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
