@@ -14,8 +14,6 @@ namespace Exam_Mgmt
             // Add services
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddScoped<Top3RankDAL>();
-
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -39,56 +37,6 @@ namespace Exam_Mgmt
                     });
             });
 
-//>>>>>>> origin/chaitanya
-       
-
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-                });
-            });
-//<<<<<<< HEAD
-            builder.Services.AddSwaggerGen();
-//<<<<<<< HEAD
-            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
-
-
-            builder.Services.AddScoped<ISemesterRepository,SemesterRepository>();
-            //=======
-            //HEAD
-            //Subject_Master
-            //=======
->>>>>>>>> Temporary merge branch 2
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-                });
-            });
-//<<<<<<< HEAD
-            builder.Services.AddSwaggerGen();
-//<<<<<<< HEAD
-            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
-
-
-//<<<<<<< HEAD
-//>>>>>>> origin/Shreyash
-//=======
-            builder.Services.AddScoped<SemesterMasterService>(); 
-            builder.Services.AddScoped<SemesterMasterService>();
-            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
-            //Subject_Master
-//>>>>>>> origin/chaitanya
-
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("ReactPolicy",
-                    policy =>
-                    {
-                        policy.WithOrigins("http://localhost:5173")
-                              .AllowAnyHeader()
-                              .AllowAnyMethod();
-                    });
-            });
-
-            // ? VERY IMPORTANT
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -97,30 +45,29 @@ namespace Exam_Mgmt
                     Version = "v1"
                 });
             });
-<<<<<<<<< Temporary merge branch 1
-            builder.Services.AddScoped<SemesterMasterService>();
-            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
             builder.Services.AddScoped<SubjectMasterService>();
-=========
-//>>>>>>> origin/Shreyash
->>>>>>>>> Temporary merge branch 2
+            builder.Services.AddScoped<SubjectSemMappingService>();
+            //<<<<<<< HEAD
 
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
 
             //=======
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-//>>>>>>> origin/Vishwas
-//>>>>>>> origin/Shreyash
-//=======
+            //>>>>>>> origin/Vishwas
+            //>>>>>>> origin/Shreyash
+            //=======
+            builder.Services.AddScoped<StudentRepository, StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
-<<<<<<<<< Temporary merge branch 1
+            //<<<<<<< HEAD
+            //>>>>>>> origin/Shreyash
+            //=======
+            builder.Services.AddScoped<SemesterMasterService>();
+
+            //>>>>>>> origin/chaitanya
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
-
-=========
-//>>>>>>> origin/Shreyash
->>>>>>>>> Temporary merge branch 2
-
+            builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
             var app = builder.Build();
 
             // Configure middleware
@@ -141,7 +88,6 @@ namespace Exam_Mgmt
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseCors("AllowReactApp");
-            app.UseCors("ReactPolicy");
             app.UseAuthorization();
             app.MapControllers();
 

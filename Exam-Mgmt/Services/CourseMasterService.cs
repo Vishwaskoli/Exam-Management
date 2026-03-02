@@ -8,7 +8,7 @@ namespace Exam_Mgmt.Services
 {
     public class CourseMasterService : ICourseMasterService
     {
-        private readonly string? cs;
+        //private readonly string? cs;
         private readonly string cs;
         public CourseMasterService(IConfiguration config)
         {
@@ -167,7 +167,7 @@ namespace Exam_Mgmt.Services
                                 Longitude = rd["Longitude"] == DBNull.Value
                                            ? null
                                            : Convert.ToDecimal(rd["Longitude"])
-                                              : Convert.ToInt32(rd["Modified_By"])
+                                              //: Convert.ToInt32(rd["Modified_By"])
                             });
                         }
                     }
