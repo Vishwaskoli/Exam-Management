@@ -39,4 +39,4 @@ namespace Exam_Mgmt.Controllers
             return Ok(result);
         }
     }
-}
+} 

@@ -13,12 +13,21 @@ namespace Exam_Mgmt.Controllers
         {
             _dal = dal;
         }
-
         [HttpGet]
         public IActionResult GetTop3(int? courseId, int? semId, int? subjectId)
         {
-            var data = _dal.GetTop3(courseId, semId, subjectId);
-            return Ok(data);
+            if (courseId == null || courseId <= 0)
+                return BadRequest("Course is required");
+
+            try
+            {
+                var data = _dal.GetTop3(courseId, semId, subjectId);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
     }
 }

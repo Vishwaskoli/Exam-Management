@@ -38,19 +38,36 @@ namespace Exam_Mgmt.DAL
                         {
                             Top3RankModel model = new Top3RankModel
                             {
-                                Course_Name = dr["Course_Name"].ToString(),
-                                Sem_Name = dr["Sem_Name"].ToString(),
-                                Subject_Name = dr["Subject_Name"].ToString(),
-                                Student_Id = Convert.ToInt32(dr["Student_Id"]),
-                                Obtained_Marks = Convert.ToInt32(dr["Obtained_Marks"]),
-                                Total_Marks = Convert.ToInt32(dr["Total_Marks"]),
-                                Percentage = Convert.ToDecimal(dr["Percentage"]),
-                                RankPosition = Convert.ToInt32(dr["RankPosition"])
+                                Course_Name = dr["Course_Name"]?.ToString(),
+                                Sem_Name = dr["Sem_Name"]?.ToString(),
+                                Subject_Name = dr["Subject_Name"]?.ToString(),
+
+                                Student_Id = dr["Student_Id"] != DBNull.Value
+                    ? Convert.ToInt32(dr["Student_Id"])
+                    : 0,
+
+                                 
+
+                                Obtained_Marks = dr["Obtained_Marks"] != DBNull.Value
+                    ? Convert.ToInt32(dr["Obtained_Marks"])
+                    : 0,
+
+                                Total_Marks = dr["Total_Marks"] != DBNull.Value
+                    ? Convert.ToInt32(dr["Total_Marks"])
+                    : 0,
+
+                                Percentage = dr["Percentage"] != DBNull.Value
+                    ? Convert.ToDecimal(dr["Percentage"])
+                    : 0,
+
+                                RankPosition = dr["RankPosition"] != DBNull.Value
+                    ? Convert.ToInt32(dr["RankPosition"])
+                    : 0
                             };
 
                             list.Add(model);
                         }
-                    }
+                    } 
                 }
             }
 

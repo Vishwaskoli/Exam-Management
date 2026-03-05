@@ -1,7 +1,9 @@
+using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
+//using Microsoft.OpenApi.Models;
 
 namespace Exam_Mgmt
 {
@@ -51,6 +53,7 @@ namespace Exam_Mgmt
             //<<<<<<< HEAD
 
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
+            builder.Services.AddScoped<Top3RankDAL>();
 
             //=======
             builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
@@ -66,6 +69,7 @@ namespace Exam_Mgmt
 
             //>>>>>>> origin/chaitanya
             builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
             builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
             var app = builder.Build();
