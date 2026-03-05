@@ -8,14 +8,19 @@
         public int StudentId { get; set; }
         public int ExamId { get; set; }
         public int SubjectId { get; set; }
+
         public int ObtainedMarks { get; set; }
         public int TotalMarks { get; set; }
-        public int CreatedBy { get; set; }
-        public DateTime? CreatedDate { get; set; }
+
+        public int? CreatedBy { get; set; }
         public int? ModifiedBy { get; set; }
-        public DateTime? ModifiedDate { get; set; }
-        public decimal? Latitude { get; set; }
+
         public decimal? Longitude { get; set; }
-        public char? Obsolete { get; set; }
+        public decimal? Latitude { get; set; }
+
+        // 👇 ADD THESE (for display)
+        public string? StudentName { get; set; }
+        public string? ExamName { get; set; }
+        public string? SubjectName { get; set; }
     }
 }

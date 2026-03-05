@@ -54,6 +54,7 @@ update Result_Master set Obsolete='O',Modified_By=@Modified_By,Modified_Date=get
 end
 end
 
+update Result_Master set Obsolete='N'
 
 select * from Result_Master
 

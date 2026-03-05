@@ -88,6 +88,43 @@ namespace Exam_Mgmt.Services
                 .ToList();
         }
 
+        public async Task<List<object>> GetSubjectsForExamAsync(int examId)
+        {
+            var result = new List<object>();
+
+            using SqlConnection con = new SqlConnection(_connectionString);
+            using SqlCommand cmd = new SqlCommand(@"
+SELECT 
+    em.Exam_Id,
+    sm.Subject_Id as subjectId,
+    sm.Subject_Name as subjectName,
+    em.Total_Marks as totalMarks
+FROM Exam_Master em
+JOIN Subject_Master sm 
+    ON sm.Subject_Id = em.Subject_Id
+WHERE em.Exam_Id = @ExamId
+AND ISNULL(em.Obsolete,'N')='N'
+", con);
+
+            cmd.Parameters.AddWithValue("@ExamId", examId);
+
+            await con.OpenAsync();
+
+            using var reader = await cmd.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                result.Add(new
+                {
+                    subjectId = Convert.ToInt32(reader["subjectId"]),
+                    subjectName = reader["subjectName"].ToString(),
+                    totalMarks = Convert.ToInt32(reader["totalMarks"])
+                });
+            }
+
+            return result;
+        }
+
         // ================= GET TOTAL MARKS =================
         public async Task<int> GetTotalMarksAsync(int examId)
         {
