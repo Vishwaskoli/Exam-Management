@@ -12,6 +12,22 @@ namespace Exam_Mgmt
 
             // Add services
             builder.Services.AddControllers();
+            builder.Services.AddAuthorization();
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateSchema=JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationSchema;
+            })
+                .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateIssuer=false,
+                    ValidateAudience=false,
+                    ValidateIssuerSigningKey=true,
+                    IssuerSigningKey= new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"]))
+                }
+            })
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddCors(options =>
             {
