@@ -22,11 +22,6 @@ namespace Exam_Mgmt
                               .AllowAnyHeader()
                               .AllowAnyMethod();
                     });
-            });
-
-
-            builder.Services.AddCors(options =>
-            {
                 options.AddPolicy("AllowReactApp",
                     policy =>
                     {
@@ -47,27 +42,13 @@ namespace Exam_Mgmt
 
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
-//<<<<<<< HEAD
-
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
-
-            //=======
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-//>>>>>>> origin/Vishwas
-//>>>>>>> origin/Shreyash
-//=======
-            builder.Services.AddScoped<StudentRepository,StudentRepository>();
+            builder.Services.AddScoped<StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
-//<<<<<<< HEAD
-//>>>>>>> origin/Shreyash
-//=======
-            builder.Services.AddScoped<SemesterMasterService>(); 
-
-//>>>>>>> origin/chaitanya
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
             builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
-            builder.Services.AddScoped<ResultRepository>();
+            //builder.Services.AddScoped<ResultRepository>();
 
             var app = builder.Build();
 
@@ -83,12 +64,7 @@ namespace Exam_Mgmt
 
 
             app.UseCors("AllowAll");
-
-            app.UseCors("ReactPolicy");
-
             app.UseHttpsRedirection();
-            app.UseCors("AllowAll");
-            app.UseCors("AllowReactApp");
             app.UseAuthorization();
             app.MapControllers();
 
