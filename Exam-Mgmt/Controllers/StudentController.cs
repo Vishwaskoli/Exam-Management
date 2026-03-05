@@ -80,14 +80,20 @@ namespace Exam_Mgmt.Controllers
         }
 
         [HttpPost("delete")]
-        public async Task<IActionResult> Delete([FromBody]Student student)
+        public async Task<IActionResult> Delete([FromBody]StudentDTO student)
         {
             if (student.Student_Id <= 0)
                 return BadRequest("Invalid Student Id");
 
             student.Modified_By = 1;
 
-            int rows = await _repository.ExecuteAsync(student, "Delete");
+            Student stu = new Student();
+            stu.Student_Id = student.Student_Id;
+            stu.Modified_By = 1;
+            stu.Longitude = student.Longitude;
+            stu.Latitude = student.Latitude;
+
+            int rows = await _repository.ExecuteAsync(stu, "Delete");
 
             if (rows > 0)
                 return Ok("Student Deleted");
