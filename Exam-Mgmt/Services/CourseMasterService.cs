@@ -8,7 +8,8 @@ namespace Exam_Mgmt.Services
 {
     public class CourseMasterService : ICourseMasterService
     {
-        private readonly string? cs;
+        //private readonly string? cs;
+        private readonly string cs;
         public CourseMasterService(IConfiguration config)
         {
             cs = config.GetConnectionString("DefaultConnection");
@@ -20,6 +21,12 @@ namespace Exam_Mgmt.Services
         //    using (SqlConnection conn = new SqlConnection(cs))
         //    {
         //        await conn.OpenAsync();
+        public async Task<List<Course>> GetAllCoursesAsync()
+        {
+            var courses = new List<Course>();
+            using (SqlConnection conn = new SqlConnection(cs))
+            {
+                await conn.OpenAsync();
 
         //        using (SqlCommand cmd = new SqlCommand(
         //            "sp_GetAllCourse",
@@ -55,6 +62,34 @@ namespace Exam_Mgmt.Services
         //        return courses;
         //    }
         //}
+                using (SqlCommand cmd = new SqlCommand(
+                    "sp_GetAllCourse",
+                    conn))
+                {
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            courses.Add(new Course
+                            {
+                                Course_Id = Convert.ToInt32(reader["Course_Id"]),
+                                Course_Name = reader["Course_Name"]?.ToString(),
+                                Obsolete = Convert.ToChar(reader["Obsolete"]),
+                                Created_Date = Convert.ToDateTime(reader["Created_Date"]),
+                                Created_By = Convert.ToInt32(reader["Created_By"]),
+                                Modified_Date = reader["Modified_Date"] == DBNull.Value
+                                    ? null
+                                    : Convert.ToDateTime(reader["Modified_Date"]),
+                                Modified_By = reader["Modified_By"] == DBNull.Value
+                                              ? null
+                                              : Convert.ToInt32(reader["Modified_By"])
+                            });
+                        }
+                    }
+                }
+                return courses;
+            }
+        }
 
         public async Task<int> CreateCourseAsync(Course c1)
         {
@@ -132,6 +167,7 @@ namespace Exam_Mgmt.Services
                                 Longitude = rd["Longitude"] == DBNull.Value
                                            ? null
                                            : Convert.ToDecimal(rd["Longitude"])
+                                              //: Convert.ToInt32(rd["Modified_By"])
                             });
                         }
                     }

@@ -1,8 +1,6 @@
 ﻿using Exam_Mgmt.Models;
 using Exam_Mgmt.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 
 namespace Exam_Mgmt.Controllers
 {
@@ -12,6 +10,7 @@ namespace Exam_Mgmt.Controllers
     {
         private readonly ICourseMasterService _courseMasterService;
 
+        // ✅ Only ONE constructor
         public CourseMasterController(ICourseMasterService service)
         {
             _courseMasterService = service;
@@ -24,19 +23,22 @@ namespace Exam_Mgmt.Controllers
         //    return Ok(courses);
         //}
 
-
+        // ================= CREATE =================
         [HttpPost]
         public async Task<IActionResult> CreateCourse([FromBody] Course c1)
         {
             if (c1 == null || string.IsNullOrWhiteSpace(c1.Course_Name))
-                return BadRequest("Course Name and Created_By are required.");
+                return BadRequest("Course Name is required.");
+
             int a = await _courseMasterService.CreateCourseAsync(c1);
+
             if (a > 0)
-                return Ok("Course created succesfully");
+                return Ok("Course created successfully");
             else
-                return BadRequest("Course not created, check before submiting...");
+                return BadRequest("Course not created");
         }
 
+        // ================= GET ACTIVE =================
         [HttpGet("ActiveCourses")]
         public async Task<IActionResult> GetActiveCourse()
         {
@@ -44,41 +46,43 @@ namespace Exam_Mgmt.Controllers
             return Ok(courses);
         }
 
+        // ================= UPDATE =================
         [HttpPost("UpdateCourse/{id}")]
-        //public async Task<ActionResult> UpdateCourseName([FromBody] Course c, [FromRoute] int id)
-        public async Task<ActionResult> UpdateCourseName([FromBody]Course c, [FromRoute]int id)
+        public async Task<ActionResult> UpdateCourseName([FromBody] Course c, [FromRoute] int id)
         {
             if (c == null || string.IsNullOrWhiteSpace(c.Course_Name))
-                return BadRequest("Valid Course Name and Modified_By are required.");
+                return BadRequest("Valid Course Name is required.");
+
             int a = await _courseMasterService.UpdateCourseAsync(id, c);
-            //int a = await _courseMasterService.UpdateCourseAsync(id,c);
+
             if (a > 0)
-                return Ok($"Course Updated Succesfullly to {c.Course_Name}");
+                return Ok($"Course Updated Successfully to {c.Course_Name}");
             else
                 return BadRequest("Course not updated");
         }
 
+        // ================= DELETE =================
         [HttpPost("DeleteCourse/{id}")]
-        //public async Task<ActionResult> DeleteCourse([FromRoute] int id, [FromQuery] decimal lat, [FromQuery] decimal lon)
         public async Task<ActionResult> DeleteCourse([FromRoute] int id)
         {
             int a = await _courseMasterService.DeleteCourseAsync(id);
+
             if (a > 0)
                 return Ok("Course Deleted Successfully");
             else
                 return BadRequest("Course not Deleted");
         }
 
+        // ================= GET BY ID =================
         [HttpGet("{id}")]
         public async Task<ActionResult> CourseById(int id)
         {
             Course c = await _courseMasterService.GetCourseByIdAsync(id);
-            if (c != null)
-                return Ok();
 
+            if (c != null)
+                return Ok(c);   // ✅ you forgot to return c
             else
                 return NotFound();
         }
-
     }
 }

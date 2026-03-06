@@ -201,5 +201,38 @@ namespace Exam_Mgmt.Controllers
 
             return Ok(new { exists });
         }
+
+        // GET: api/SubjectSemMapping/SemesterByCourse/1
+        [HttpGet("SemesterByCourse/{courseId}")]
+        public IActionResult GetSemesterByCourse(int courseId)
+        {
+            if (courseId <= 0)
+                return BadRequest("Invalid Course Id");
+
+            var semesters = _service.GetAll()
+                .Where(x => x.Course_Id == courseId)
+                .Select(x => x.Sem_Id)
+                .Distinct()
+                .ToList();
+
+            return Ok(semesters);
+        }
+
+
+        // GET: api/SubjectSemMapping/SubjectByCourseAndSemester?courseId=1&semId=1
+        [HttpGet("SubjectByCourseAndSemester")]
+        public IActionResult GetSubjectByCourseAndSemester(int courseId, int semId)
+        {
+            if (courseId <= 0 || semId <= 0)
+                return BadRequest("Invalid Course or Semester Id");
+
+            var subjects = _service.GetAll()
+                .Where(x => x.Course_Id == courseId && x.Sem_Id == semId)
+                .Select(x => x.Sub_Id)
+                .Distinct()
+                .ToList();
+
+            return Ok(subjects);
+        }
     }
 }

@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CourseSemMappingController : ControllerBase
     {
         private readonly ICourseSemMappingService _service;
@@ -17,9 +17,9 @@ namespace Exam_Mgmt.Controllers
 
         // GET ALL
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int? courseId)
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAll(courseId);
             return Ok(data);
         }
 
@@ -39,4 +39,4 @@ namespace Exam_Mgmt.Controllers
             return Ok(result);
         }
     }
-}
+} 

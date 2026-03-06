@@ -1,6 +1,8 @@
+using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi.Models;
+//using Microsoft.OpenApi.Models;
 
 namespace Exam_Mgmt
 {
@@ -58,14 +60,28 @@ namespace Exam_Mgmt
 
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
+            //<<<<<<< HEAD
+
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
-            builder.Services.AddScoped<StudentRepository>();
+            builder.Services.AddScoped<Top3RankDAL>();
+
+            //=======
+            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
+            //>>>>>>> origin/Vishwas
+            //>>>>>>> origin/Shreyash
+            //=======
+            builder.Services.AddScoped<StudentRepository, StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
+            //<<<<<<< HEAD
+            //>>>>>>> origin/Shreyash
+            //=======
             builder.Services.AddScoped<SemesterMasterService>();
+
+            //>>>>>>> origin/chaitanya
+            builder.Services.AddScoped<SemesterMasterService>();
+            builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
             builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
-            //builder.Services.AddScoped<ResultRepository>();
-
             var app = builder.Build();
 
             // Configure middleware

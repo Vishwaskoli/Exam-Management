@@ -14,5 +14,3 @@ namespace Exam_Mgmt.Repositories
     }
 }
 //ss
-//ss
-//s
