@@ -1,208 +1,68 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\",
-  "Documents": [],
-=======
-  "WorkspaceRootPath": "D:\\Mayur\\Exam-Mgmt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\repositories\\semesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\semesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\top3rankmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\top3rankmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\exam-mgmt.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:exam-mgmt.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\repositories\\isemesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\isemesterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\subjectsemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\subjectsemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\subjectmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\subjectmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\semestermasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\semestermasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\iexammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\iexammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\icoursesemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\icoursesemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\icoursemasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\icoursemasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\exammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\exammasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\coursesemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\coursesemmappingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\services\\coursemasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:services\\coursemasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\subjectsemmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\subjectsemmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\exammastermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\exammastermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\deletestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\deletestudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\coursesemmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\coursesemmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\semestermastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\semestermastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\exammastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\exammastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\coursesemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\coursesemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\coursemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\coursesemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\coursesemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\course_sem_mapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:course_sem_mapping.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\exammastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\exammastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\dal\\top3rankdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:dal\\top3rankdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\resultmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\resultmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\top3rankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\top3rankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\semestermastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\semestermastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\exam-mgmt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:exam-mgmt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Mayur\\Exam-Mgmt\\obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Mayur\\Exam-Mgmt\\obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfoInputs.cache||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfoInputs.cache||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\subjectsemmappingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\top3rankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\top3rankcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Mayur\\Exam-Mgmt\\obj\\Exam-Mgmt.csproj.nuget.dgspec.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Exam-Mgmt.csproj.nuget.dgspec.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\filters\\authfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:filters\\authfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\sqlqueries\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:sqlqueries\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|de4aead3-e18a-4569-ac44-76a995ca4ca6MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.LoginUser.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Mayur\\.vs\\VSWorkspaceState.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|6b742fa1-0da5-4131-83ae-0d03f3f61aeeMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.RegisterUser.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Mayur\\Exam-Mgmt\\obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\project.assets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|de4aead3-e18a-4569-ac44-76a995ca4ca6MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.LoginUser.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Mayur\\Exam-Mgmt\\obj\\Exam-Mgmt.csproj.nuget.g.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Exam-Mgmt.csproj.nuget.g.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|d:\\mayur\\exam-mgmt\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|6b742fa1-0da5-4131-83ae-0d03f3f61aeeMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.RegisterUser.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
->>>>>>> origin/mayur
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -210,28 +70,165 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-=======
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CourseSemMapping.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\CourseSemMapping.cs",
-              "RelativeDocumentMoniker": "Models\\CourseSemMapping.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\CourseSemMapping.cs",
-              "RelativeToolTip": "Models\\CourseSemMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CourseMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseMasterController.cs*",
+              "RelativeToolTip": "Controllers\\CourseMasterController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:17:04.07Z",
-              "IsPinned": true
+              "WhenOpened": "2026-03-06T07:23:50.348Z",
+              "EditorCaption": ""
             },
             {
->>>>>>> origin/mayur
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseSemMappingController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseSemMappingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseSemMappingController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\CourseSemMappingController.cs*",
+              "RelativeToolTip": "Controllers\\CourseSemMappingController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:23:43.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExamMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ExamMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ExamMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ExamMasterController.cs*",
+              "RelativeToolTip": "Controllers\\ExamMasterController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:23:38.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\StudentController.cs*",
+              "RelativeToolTip": "Controllers\\StudentController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:23:29.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SubjectMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubjectMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs*",
+              "RelativeToolTip": "Controllers\\SubjectMasterController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:23:25.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SubjectSemMappingController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubjectSemMappingController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs*",
+              "RelativeToolTip": "Controllers\\SubjectSemMappingController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:23:19.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Top3RankController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\Top3RankController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Top3RankController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\Top3RankController.cs*",
+              "RelativeToolTip": "Controllers\\Top3RankController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:23:04.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SemesterMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SemesterMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SemesterMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\SemesterMasterController.cs*",
+              "RelativeToolTip": "Controllers\\SemesterMasterController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:20:14.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResultMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ResultMasterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ResultMasterController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\ResultMasterController.cs*",
+              "RelativeToolTip": "Controllers\\ResultMasterController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:19:57.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthFilter.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Filters\\AuthFilter.cs",
+              "RelativeDocumentMoniker": "Filters\\AuthFilter.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Filters\\AuthFilter.cs*",
+              "RelativeToolTip": "Filters\\AuthFilter.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:18:35.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "Controllers\\UserController.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:06:05.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Repositories\\UserRepository.cs*",
+              "RelativeToolTip": "Repositories\\UserRepository.cs*",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwAEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T07:03:05.083Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
@@ -256,604 +253,28 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-<<<<<<< HEAD
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-=======
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAqwCoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T11:25:52.887Z",
+              "DocumentIndex": 13,
+              "Title": "Create dbo.RegisterUser ",
+              "DocumentMoniker": "6b742fa1-0da5-4131-83ae-0d03f3f61aeeMSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.RegisterUser.sql",
+              "ToolTip": "Create dbo.RegisterUser ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-06T05:40:50.924Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Top3RankModel.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\Top3RankModel.cs",
-              "RelativeDocumentMoniker": "Models\\Top3RankModel.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\Top3RankModel.cs",
-              "RelativeToolTip": "Models\\Top3RankModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T08:43:12.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T11:49:59.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwC0AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T15:54:13.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentRepository.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Repositories\\StudentRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\StudentRepository.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Repositories\\StudentRepository.cs",
-              "RelativeToolTip": "Repositories\\StudentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T15:17:50.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SemesterRepository.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Repositories\\SemesterRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\SemesterRepository.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Repositories\\SemesterRepository.cs",
-              "RelativeToolTip": "Repositories\\SemesterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T07:05:17.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Exam-Mgmt.http",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Exam-Mgmt.http",
-              "RelativeDocumentMoniker": "Exam-Mgmt.http",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Exam-Mgmt.http",
-              "RelativeToolTip": "Exam-Mgmt.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-02-18T11:53:33.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ISemesterRepository.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Repositories\\ISemesterRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ISemesterRepository.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Repositories\\ISemesterRepository.cs",
-              "RelativeToolTip": "Repositories\\ISemesterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAsAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T04:03:05.363Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "Models\\UserModel.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\UserModel.cs",
-              "RelativeToolTip": "Models\\UserModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T11:23:02.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SubjectSemMappingService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\SubjectSemMappingService.cs",
-              "RelativeDocumentMoniker": "Services\\SubjectSemMappingService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\SubjectSemMappingService.cs",
-              "RelativeToolTip": "Services\\SubjectSemMappingService.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwHAAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:17:18.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "Models\\Subject.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\Subject.cs",
-              "RelativeToolTip": "Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:53:33.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SubjectMasterService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\SubjectMasterService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\SubjectMasterService.cs",
-              "RelativeToolTip": "Services\\SubjectMasterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:17:17.664Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "SemesterMasterService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\SemesterMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\SemesterMasterService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\SemesterMasterService.cs",
-              "RelativeToolTip": "Services\\SemesterMasterService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T05:12:10.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IExamMasterService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\IExamMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\IExamMasterService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\IExamMasterService.cs",
-              "RelativeToolTip": "Services\\IExamMasterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:47:36.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ICourseSemMappingService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\ICourseSemMappingService.cs",
-              "RelativeDocumentMoniker": "Services\\ICourseSemMappingService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\ICourseSemMappingService.cs",
-              "RelativeToolTip": "Services\\ICourseSemMappingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:17:16.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ICourseMasterService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\ICourseMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\ICourseMasterService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\ICourseMasterService.cs",
-              "RelativeToolTip": "Services\\ICourseMasterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T05:46:46.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ExamMasterService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\ExamMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\ExamMasterService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\ExamMasterService.cs",
-              "RelativeToolTip": "Services\\ExamMasterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:47:29.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CourseSemMappingService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\CourseSemMappingService.cs",
-              "RelativeDocumentMoniker": "Services\\CourseSemMappingService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\CourseSemMappingService.cs",
-              "RelativeToolTip": "Services\\CourseSemMappingService.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAAAK0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T05:50:36.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CourseMasterService.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Services\\CourseMasterService.cs",
-              "RelativeDocumentMoniker": "Services\\CourseMasterService.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Services\\CourseMasterService.cs",
-              "RelativeToolTip": "Services\\CourseMasterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T08:30:43.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SubjectSemMapping.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\SubjectSemMapping.cs",
-              "RelativeDocumentMoniker": "Models\\SubjectSemMapping.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\SubjectSemMapping.cs",
-              "RelativeToolTip": "Models\\SubjectSemMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:17:05.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Student.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "Models\\Student.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\Student.cs",
-              "RelativeToolTip": "Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T14:15:47.957Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Semester.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\Semester.cs",
-              "RelativeDocumentMoniker": "Models\\Semester.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\Semester.cs",
-              "RelativeToolTip": "Models\\Semester.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T12:31:38.676Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ExamMasterModel.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\ExamMasterModel.cs",
-              "RelativeDocumentMoniker": "Models\\ExamMasterModel.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\ExamMasterModel.cs",
-              "RelativeToolTip": "Models\\ExamMasterModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:46:29.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "DeleteStudentDto.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\DeleteStudentDto.cs",
-              "RelativeDocumentMoniker": "Models\\DeleteStudentDto.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\DeleteStudentDto.cs",
-              "RelativeToolTip": "Models\\DeleteStudentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T14:15:44.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Course.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "Models\\Course.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\Course.cs",
-              "RelativeToolTip": "Models\\Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:17:03.128Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "SubjectSemMappingController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SubjectSemMappingController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\SubjectSemMappingController.cs",
-              "RelativeToolTip": "Controllers\\SubjectSemMappingController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwAMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T06:05:12.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SubjectMasterController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SubjectMasterController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\SubjectMasterController.cs",
-              "RelativeToolTip": "Controllers\\SubjectMasterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T06:04:52.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "SemesterMasterController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\SemesterMasterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SemesterMasterController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\SemesterMasterController.cs",
-              "RelativeToolTip": "Controllers\\SemesterMasterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T05:08:17.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ExamMasterController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\ExamMasterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ExamMasterController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\ExamMasterController.cs",
-              "RelativeToolTip": "Controllers\\ExamMasterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T05:50:50.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CourseSemMappingController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\CourseSemMappingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CourseSemMappingController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\CourseSemMappingController.cs",
-              "RelativeToolTip": "Controllers\\CourseSemMappingController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T09:58:49.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "CourseMasterController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\CourseMasterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CourseMasterController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\CourseMasterController.cs",
-              "RelativeToolTip": "Controllers\\CourseMasterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:53:33.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-18T11:53:33.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Course_Sem_Mapping.sql",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Course_Sem_Mapping.sql",
-              "RelativeDocumentMoniker": "Course_Sem_Mapping.sql",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Course_Sem_Mapping.sql",
-              "RelativeToolTip": "Course_Sem_Mapping.sql",
+              "Title": "Create dbo.LoginUser ",
+              "DocumentMoniker": "de4aead3-e18a-4569-ac44-76a995ca4ca6MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.LoginUser.sql",
+              "ToolTip": "Create dbo.LoginUser ",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-03-05T11:30:06.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Top3RankController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\Top3RankController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Top3RankController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\Top3RankController.cs",
-              "RelativeToolTip": "Controllers\\Top3RankController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T05:54:00.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Top3RankDAL.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\DAL\\Top3RankDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\Top3RankDAL.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\DAL\\Top3RankDAL.cs",
-              "RelativeToolTip": "DAL\\Top3RankDAL.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAADwv0UAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T08:20:05.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Exam-Mgmt.csproj",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Exam-Mgmt.csproj",
-              "RelativeDocumentMoniker": "Exam-Mgmt.csproj",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Exam-Mgmt.csproj",
-              "RelativeToolTip": "Exam-Mgmt.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-02T04:28:52.351Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T08:42:44.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T14:15:40.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Exam-Mgmt.AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfo.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfo.cs",
-              "RelativeToolTip": "obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T14:15:08.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Exam-Mgmt.AssemblyInfoInputs.cache",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfoInputs.cache",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfoInputs.cache",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfoInputs.cache",
-              "RelativeToolTip": "obj\\Debug\\net8.0\\Exam-Mgmt.AssemblyInfoInputs.cache",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002368|",
-              "WhenOpened": "2026-03-01T15:46:20.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-28T14:46:35.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Exam-Mgmt.csproj.nuget.dgspec.json",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\obj\\Exam-Mgmt.csproj.nuget.dgspec.json",
-              "RelativeDocumentMoniker": "obj\\Exam-Mgmt.csproj.nuget.dgspec.json",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\obj\\Exam-Mgmt.csproj.nuget.dgspec.json",
-              "RelativeToolTip": "obj\\Exam-Mgmt.csproj.nuget.dgspec.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-18T11:53:33.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "SQLQuery1.sql",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\SQLqueries\\SQLQuery1.sql",
-              "RelativeDocumentMoniker": "SQLqueries\\SQLQuery1.sql",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\SQLqueries\\SQLQuery1.sql",
-              "RelativeToolTip": "SQLqueries\\SQLQuery1.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-18T11:53:33.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T12:28:30.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "VSWorkspaceState.json",
-              "DocumentMoniker": "D:\\Mayur\\.vs\\VSWorkspaceState.json",
-              "RelativeDocumentMoniker": "..\\.vs\\VSWorkspaceState.json",
-              "ToolTip": "D:\\Mayur\\.vs\\VSWorkspaceState.json",
-              "RelativeToolTip": "..\\.vs\\VSWorkspaceState.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-20T08:57:41.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "Models\\Subject.cs",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\Models\\Subject.cs",
-              "RelativeToolTip": "Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T11:53:33.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "project.assets.json",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\obj\\project.assets.json",
-              "RelativeDocumentMoniker": "obj\\project.assets.json",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\obj\\project.assets.json",
-              "RelativeToolTip": "obj\\project.assets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-18T11:53:33.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Exam-Mgmt.csproj.nuget.g.props",
-              "DocumentMoniker": "D:\\Mayur\\Exam-Mgmt\\obj\\Exam-Mgmt.csproj.nuget.g.props",
-              "RelativeDocumentMoniker": "obj\\Exam-Mgmt.csproj.nuget.g.props",
-              "ToolTip": "D:\\Mayur\\Exam-Mgmt\\obj\\Exam-Mgmt.csproj.nuget.g.props",
-              "RelativeToolTip": "obj\\Exam-Mgmt.csproj.nuget.g.props",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-02-18T11:53:33.724Z"
->>>>>>> origin/mayur
+              "WhenOpened": "2026-03-06T05:38:46.984Z",
+              "EditorCaption": ""
             }
           ]
         }

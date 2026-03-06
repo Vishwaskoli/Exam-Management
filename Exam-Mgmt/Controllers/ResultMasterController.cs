@@ -1,4 +1,5 @@
-﻿using Exam_Mgmt.Models;
+﻿using Exam_Mgmt.Filters;
+using Exam_Mgmt.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -7,6 +8,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthFilter]
     public class ResultMasterController : ControllerBase
     {
         private readonly string _connectionString;

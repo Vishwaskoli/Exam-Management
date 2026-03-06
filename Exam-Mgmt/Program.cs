@@ -3,10 +3,6 @@ using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi.Models;
 
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-
 namespace Exam_Mgmt
 {
     public class Program
@@ -16,47 +12,25 @@ namespace Exam_Mgmt
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
-
             builder.Services.AddAuthorization();
-
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey =
-                        new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"])
-                        )
-                };
-            });
 
             builder.Services.AddEndpointsApiExplorer();
 
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll",
-                    policy =>
-                    {
-                        policy.AllowAnyOrigin()
-                              .AllowAnyHeader()
-                              .AllowAnyMethod();
-                    });
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
 
-                options.AddPolicy("AllowReactApp",
-                    policy =>
-                    {
-                        policy.WithOrigins("http://localhost:5173")
-                              .AllowAnyHeader()
-                              .AllowAnyMethod();
-                    });
+                options.AddPolicy("AllowReactApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
             });
 
             builder.Services.AddSwaggerGen(c =>
@@ -72,8 +46,6 @@ namespace Exam_Mgmt
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
             builder.Services.AddScoped<UserRepository>();
-            //<<<<<<< HEAD
-
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
             builder.Services.AddScoped<Top3RankDAL>();
             builder.Services.AddScoped<CourseMasterService>();
@@ -95,7 +67,6 @@ namespace Exam_Mgmt
 
             app.UseHttpsRedirection();
 
-            app.UseAuthentication();   // IMPORTANT
             app.UseAuthorization();
 
             app.MapControllers();

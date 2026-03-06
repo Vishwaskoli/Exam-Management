@@ -1,14 +1,16 @@
-﻿using Exam_Mgmt.Services;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using Exam_Mgmt.Filters;
 using Exam_Mgmt.Models;
+using Exam_Mgmt.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 
 namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthFilter]
     public class SubjectSemMappingController : ControllerBase
     {
         private readonly SubjectSemMappingService _service;

@@ -1,4 +1,5 @@
-﻿using Exam_Mgmt.Models;
+﻿using Exam_Mgmt.Filters;
+using Exam_Mgmt.Models;
 using Exam_Mgmt.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,6 +7,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthFilter]
     public class CourseMasterController : ControllerBase
     {
         private readonly ICourseMasterService _courseMasterService;

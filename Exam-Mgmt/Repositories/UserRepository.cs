@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using Exam_Mgmt.Models;
 
 namespace Exam_Mgmt.Repositories
@@ -26,6 +26,31 @@ namespace Exam_Mgmt.Repositories
                 cmd.Parameters.AddWithValue("@Username", user.Username);
                 cmd.Parameters.AddWithValue("@Password", user.Password);
                 cmd.Parameters.AddWithValue("@ConfirmPassword", user.ConfirmPassword);
+
+                con.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    message = reader["Message"].ToString();
+                }
+            }
+
+            return message;
+        }
+        // LOGIN METHOD
+        public string LoginUser(UserModel user)
+        {
+            string message = "";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("LoginUser", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Username", user.Username);
+                cmd.Parameters.AddWithValue("@Password", user.Password);
 
                 con.Open();
 

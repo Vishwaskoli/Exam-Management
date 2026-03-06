@@ -1,4 +1,5 @@
-﻿using Exam_Mgmt.Models;
+﻿using Exam_Mgmt.Filters;
+using Exam_Mgmt.Models;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.AspNetCore.Http;
@@ -8,6 +9,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthFilter]
     public class SemesterMasterController : ControllerBase
     {
         private readonly ISemesterRepository _repo;

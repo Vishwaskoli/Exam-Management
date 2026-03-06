@@ -1,9 +1,11 @@
-﻿using Exam_Mgmt.Models;
+﻿using Exam_Mgmt.Filters;
+using Exam_Mgmt.Models;
 using Exam_Mgmt.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
 {
+    [AuthFilter]
     [ApiController]
     [Route("api/[controller]")]
     public class CourseSemMappingController : ControllerBase

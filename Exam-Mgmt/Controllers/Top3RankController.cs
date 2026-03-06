@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Exam_Mgmt.DAL;
+﻿using Exam_Mgmt.DAL;
+using Exam_Mgmt.Filters;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthFilter]
     public class Top3RankController : ControllerBase
     {
         private readonly Top3RankDAL _dal;

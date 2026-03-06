@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Exam_Mgmt.Filters;
 using Exam_Mgmt.Models;
 using Exam_Mgmt.Services;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthFilter]
     public class ExamMasterController : ControllerBase
     {
         private readonly IExamMasterService _service;
