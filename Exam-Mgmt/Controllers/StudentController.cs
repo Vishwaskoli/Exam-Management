@@ -1,6 +1,5 @@
 ﻿using Exam_Mgmt.Models;
 using Exam_Mgmt.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
@@ -81,8 +80,10 @@ namespace Exam_Mgmt.Controllers
 
         [HttpPost("delete")]
         public async Task<IActionResult> Delete([FromBody] DeleteStudentDto dto)
+        //public async Task<IActionResult> Delete([FromBody]Student student)
         {
             if (dto.Student_Id <= 0)
+                //if (student.Student_Id <= 0)
                 return BadRequest("Invalid Student Id");
 
             var student = new Student
@@ -92,6 +93,7 @@ namespace Exam_Mgmt.Controllers
                 Latitude = dto.Latitude,
                 Longitude = dto.Longitude
             };
+            student.Modified_By = 1;
 
             int rows = await _repository.ExecuteAsync(student, "Delete");
 

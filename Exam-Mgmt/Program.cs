@@ -1,7 +1,6 @@
 using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
-using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 //using Microsoft.OpenApi.Models;
 
@@ -25,11 +24,6 @@ namespace Exam_Mgmt
                               .AllowAnyHeader()
                               .AllowAnyMethod();
                     });
-            });
-
-
-            builder.Services.AddCors(options =>
-            {
                 options.AddPolicy("AllowReactApp",
                     policy =>
                     {
@@ -86,12 +80,7 @@ namespace Exam_Mgmt
 
 
             app.UseCors("AllowAll");
-
-            app.UseCors("ReactPolicy");
-
             app.UseHttpsRedirection();
-            app.UseCors("AllowAll");
-            app.UseCors("AllowReactApp");
             app.UseAuthorization();
             app.MapControllers();
 

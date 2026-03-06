@@ -47,7 +47,7 @@ namespace Exam_Mgmt.Repositories
                                 Latitude = Convert.ToDecimal(rd["Latitude"]),
                                 Longitude = Convert.ToDecimal(rd["Longitude"]),
                                 Obsolete = Convert.ToChar(rd["Obsolete"]),
-                                DOB = Convert.ToDateTime(rd["DOB"])
+                                DOB = Convert.ToDateTime(rd["DOB"]),
                             });
                         }
                         return students;
@@ -87,6 +87,7 @@ namespace Exam_Mgmt.Repositories
                         cmd.Parameters.Add("@Longitude", SqlDbType.Decimal, 18).Value = (object)student.Longitude ?? DBNull.Value;
                         cmd.Parameters.Add("@DOB", SqlDbType.DateTime).Value = (object)student.DOB ?? DBNull.Value;
 
+
                         if (mode == "Create")
                         {
                             var ans = await cmd.ExecuteScalarAsync();
@@ -98,6 +99,7 @@ namespace Exam_Mgmt.Repositories
                             //return a;
                             var result = await cmd.ExecuteScalarAsync();
                             return result == null ? 0 : Convert.ToInt32(result);
+                            return await cmd.ExecuteNonQueryAsync();
                         }
 
                     }

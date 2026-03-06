@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Exam_Mgmt.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace Exam_Mgmt.Controllers
 {
@@ -11,18 +12,70 @@ namespace Exam_Mgmt.Controllers
     public class SubjectSemMappingController : ControllerBase
     {
         private readonly SubjectSemMappingService _service;
+        private readonly IConfiguration _configuration;
 
-        public SubjectSemMappingController(SubjectSemMappingService service)
+        //public SubjectSemMappingController(SubjectSemMappingService service)
+        //{
+        //    _service = service;
+        //}
+        public SubjectSemMappingController(
+    SubjectSemMappingService service,
+    IConfiguration configuration)
         {
             _service = service;
+            _configuration = configuration;
         }
-
         // GET: api/SubjectSemMapping
         [HttpGet]
         public ActionResult<List<SubjectSemMapping>> GetAll()
         {
             var data = _service.GetAll();
             return Ok(data);
+        }
+
+        // GET: api/SubjectSemMapping/GetSubjects?courseId=1&semId=1
+        [HttpGet("GetSubjects")]
+        public IActionResult GetSubjects(int courseId, int semId)
+        {
+            if (courseId <= 0 || semId <= 0)
+                return BadRequest("Invalid Course or Semester Id");
+
+            var mappings = _service.GetAll()
+                .Where(m => m.Course_Id == courseId
+                         && m.Sem_Id == semId
+                         && m.Obsolete == "N")
+                .ToList();
+
+            var subjects = new List<object>();
+
+            using (SqlConnection con = new SqlConnection(
+                _configuration.GetConnectionString("DefaultConnection")))
+            {
+                con.Open();
+
+                foreach (var map in mappings)
+                {
+                    using (SqlCommand cmd = new SqlCommand(
+                        "SELECT Subject_Id, Subject_Name FROM Subject_Master WHERE Subject_Id=@id AND Obsolete='N'", con))
+                    {
+                        cmd.Parameters.AddWithValue("@id", map.Sub_Id);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                subjects.Add(new
+                                {
+                                    subject_Id = reader["Subject_Id"],
+                                    subject_Name = reader["Subject_Name"]
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+
+            return Ok(subjects);
         }
 
         // POST: api/SubjectSemMapping/Create

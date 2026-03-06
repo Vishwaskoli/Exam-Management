@@ -1,14 +1,16 @@
 ﻿using Exam_Mgmt.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Exam_Mgmt.Services
 {
     public interface IExamMasterService
     {
-        Task<IEnumerable<ExamMasterModel>> GetAllAsync();                             // Calls SP with Mode = 'View'
-        Task<int> AddAsync(ExamMasterModel model);                                   // Calls SP with Mode = 'Add'
-        Task<int> UpdateAsync(ExamMasterModel model);                                // Calls SP with Mode = 'Update'
-        Task<int> DeleteAsync(int examId, int modifiedBy);                           // Calls SP with Mode = 'Delete'
+        Task<List<ExamMasterModel>> GetAllAsync();
+        Task<List<ExamMasterModel>> GetByCourseSemAsync(int courseId, int semId);
+        Task<int> GetTotalMarksAsync(int examId);
+        Task<List<object>> GetSubjectsForExamAsync(int examId);
+        Task<int> AddAsync(ExamMasterModel model);
+        Task<int> UpdateAsync(ExamMasterModel model);
+        Task<int> DeleteAsync(int examId, int modifiedBy);
+
     }
 }

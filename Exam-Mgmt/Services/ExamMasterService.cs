@@ -13,18 +13,18 @@ namespace Exam_Mgmt.Services
             _connectionString = config.GetConnectionString("DefaultConnection");
         }
 
-        // Get all active exams (Obsolete = 'N')
-        public async Task<IEnumerable<ExamMasterModel>> GetAllAsync()
+        // ================= GET ALL =================
+        public async Task<List<ExamMasterModel>> GetAllAsync()
         {
             var result = new List<ExamMasterModel>();
 
-            using (SqlConnection con = new SqlConnection(_connectionString))
-            using (SqlCommand cmd = new SqlCommand("sp_Exam_Master", con))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Mode", "View");
+            using SqlConnection con = new SqlConnection(_connectionString);
+            using SqlCommand cmd = new SqlCommand("sp_Exam_Master", con);
 
-                await con.OpenAsync();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Mode", "View");
+
+            await con.OpenAsync();
 
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
@@ -50,57 +50,114 @@ namespace Exam_Mgmt.Services
                                             : Convert.ToInt32(reader["Modified_By"])
                         });
                     }
-                }
+                return result;
+            }
+
+            }
+        //    using var reader = await cmd.ExecuteReaderAsync();
+
+        //    while (await reader.ReadAsync())
+        //    {
+        //        result.Add(new ExamMasterModel
+        //        {
+        //            Exam_Id = reader.GetInt32(reader.GetOrdinal("Exam_Id")),
+        //            Exam_Name = reader["Exam_Name"]?.ToString(),
+        //            Course_Id = Convert.ToInt32(reader["Course_Id"]),
+        //            Sem_Id = Convert.ToInt32(reader["Sem_Id"]),
+
+        //            // 🔥 IMPORTANT FIX
+        //            SubjectIds = reader["SubjectIds"]?.ToString(),
+        //            ExamDates = reader["ExamDates"]?.ToString(),
+        //            TotalMarks = reader["TotalMarks"]?.ToString(),
+
+        //            Created_By = reader["Created_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Created_By"]),
+        //            Modified_By = reader["Modified_By"] == DBNull.Value ? null : (int?)Convert.ToInt32(reader["Modified_By"])
+        //        });
+        //    }
+
+        //    
+        //}
+
+        // ================= GET BY COURSE + SEM =================
+        public async Task<List<ExamMasterModel>> GetByCourseSemAsync(int courseId, int semId)
+        {
+            var allExams = await GetAllAsync();
+
+            return allExams
+                .Where(e => e.Course_Id == courseId && e.Sem_Id == semId)
+                .ToList();
+        }
+
+        public async Task<List<object>> GetSubjectsForExamAsync(int examId)
+        {
+            var result = new List<object>();
+
+            using SqlConnection con = new SqlConnection(_connectionString);
+            using SqlCommand cmd = new SqlCommand(@"
+SELECT 
+    em.Exam_Id,
+    sm.Subject_Id as subjectId,
+    sm.Subject_Name as subjectName,
+    em.Total_Marks as totalMarks
+FROM Exam_Master em
+JOIN Subject_Master sm 
+    ON sm.Subject_Id = em.Subject_Id
+WHERE em.Exam_Id = @ExamId
+AND ISNULL(em.Obsolete,'N')='N'
+", con);
+
+            cmd.Parameters.AddWithValue("@ExamId", examId);
+
+            await con.OpenAsync();
+
+            using var reader = await cmd.ExecuteReaderAsync();
+
+            while (await reader.ReadAsync())
+            {
+                result.Add(new
+                {
+                    subjectId = Convert.ToInt32(reader["subjectId"]),
+                    subjectName = reader["subjectName"].ToString(),
+                    totalMarks = Convert.ToInt32(reader["totalMarks"])
+                });
             }
 
             return result;
         }
 
-        // Add new exam
+        // ================= GET TOTAL MARKS =================
+        public async Task<int> GetTotalMarksAsync(int examId)
+        {
+            var allExams = await GetAllAsync();
+
+            var exam = allExams.FirstOrDefault(e => e.Exam_Id == examId);
+
+            if (exam == null || string.IsNullOrEmpty(exam.TotalMarks))
+                return 0;
+
+            // Since View mode aggregates as comma string
+            var marks = exam.TotalMarks.Split(',').FirstOrDefault();
+
+            return int.TryParse(marks, out int total) ? total : 0;
+        }
+
+        // ================= ADD =================
         public async Task<int> AddAsync(ExamMasterModel model)
         {
             return await ExecuteSpAsync(model, "Add");
         }
 
-        // Update existing exam
+        // ================= UPDATE =================
         public async Task<int> UpdateAsync(ExamMasterModel model)
         {
-            if (model == null)
-                throw new ArgumentNullException(nameof(model));
-
-            using (SqlConnection conn = new SqlConnection(_connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("sp_Exam_Master", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    // Set parameters
-                    cmd.Parameters.AddWithValue("@Mode", "Update");
-                    cmd.Parameters.AddWithValue("@Exam_Id", model.Exam_Id);
-                    cmd.Parameters.AddWithValue("@Exam_Name", model.Exam_Name ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Course_Id", model.Course_Id ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Sem_Id", model.Sem_Id ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@SubjectIds", model.SubjectIds ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@ExamDates", model.ExamDates ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@TotalMarks", model.TotalMarks ?? (object)DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Modified_By", model.Modified_By ?? (object)DBNull.Value);
-
-                    await conn.OpenAsync();
-
-                    // Execute the SP
-                    int rowsAffected = await cmd.ExecuteNonQueryAsync();
-
-                    return rowsAffected;
-                }
-            }
+            return await ExecuteSpAsync(model, "Update");
         }
 
-        // Soft delete exam
+        // ================= DELETE =================
         public async Task<int> DeleteAsync(int examId, int modifiedBy)
         {
             var model = new ExamMasterModel
             {
-                Mode = "Delete",
                 Exam_Id = examId,
                 Modified_By = modifiedBy
             };
@@ -108,30 +165,28 @@ namespace Exam_Mgmt.Services
             return await ExecuteSpAsync(model, "Delete");
         }
 
-        // Common executor
+        // ================= COMMON EXECUTOR =================
         private async Task<int> ExecuteSpAsync(ExamMasterModel model, string mode)
         {
-            using (SqlConnection con = new SqlConnection(_connectionString))
-            using (SqlCommand cmd = new SqlCommand("sp_Exam_Master", con))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
+            using SqlConnection con = new SqlConnection(_connectionString);
+            using SqlCommand cmd = new SqlCommand("sp_Exam_Master", con);
 
-                cmd.Parameters.AddWithValue("@Mode", mode);
-                cmd.Parameters.AddWithValue("@Exam_Id", (object)model.Exam_Id ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Exam_Name", (object)model.Exam_Name ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Course_Id", (object)model.Course_Id ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Sem_Id", (object)model.Sem_Id ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@SubjectIds", (object)model.SubjectIds ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ExamDates", (object)model.ExamDates ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TotalMarks", (object)model.TotalMarks ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Created_By", (object)model.Created_By ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Modified_By", (object)model.Modified_By ?? DBNull.Value);
+            cmd.CommandType = CommandType.StoredProcedure;
 
-                await con.OpenAsync();
+            cmd.Parameters.AddWithValue("@Mode", mode);
+            cmd.Parameters.AddWithValue("@Exam_Id", (object)model.Exam_Id ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@Exam_Name", (object)model.Exam_Name ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@Course_Id", (object)model.Course_Id ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@Sem_Id", (object)model.Sem_Id ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@SubjectIds", (object)model.SubjectIds ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@ExamDates", (object)model.ExamDates ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@TotalMarks", (object)model.TotalMarks ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@Created_By", (object)model.Created_By ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@Modified_By", (object)model.Modified_By ?? DBNull.Value);
 
-                // ExecuteNonQuery returns affected rows
-                return await cmd.ExecuteNonQueryAsync();
-            }
+            await con.OpenAsync();
+
+            return await cmd.ExecuteNonQueryAsync();
         }
     }
 }

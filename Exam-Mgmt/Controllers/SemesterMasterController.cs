@@ -16,10 +16,18 @@ namespace Exam_Mgmt.Controllers
             _repo = repo;
         }
         
+
+        // ✅ GET ALL
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             var data = await _repo.GetAllAsync();
+            return Ok(data);
+        }
+        [HttpGet("ByCourse/{courseId}")]
+        public async Task<IActionResult> GetByCourse(int courseId)
+        {
+            var data = await _repo.GetByCourse(courseId);
             return Ok(data);
         }
 
@@ -32,7 +40,12 @@ namespace Exam_Mgmt.Controllers
             if (result == 0)
                 return BadRequest("Operation Failed");
 
-            return Ok("Success");
+            
+            return Ok(new
+            {
+                id = result,
+                message = "Success"
+            });
         }
     }
 }

@@ -16,13 +16,12 @@ namespace Exam_Mgmt.Controllers
             _courseMasterService = service;
         }
 
-        // ================= GET ALL =================
-        [HttpGet]
-        public async Task<IActionResult> GetCourses()
-        {
-            var courses = await _courseMasterService.GetAllCoursesAsync();
-            return Ok(courses);
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetCourses()
+        //{
+        //    var courses = await _courseMasterService.GetAllCoursesAsync();
+        //    return Ok(courses);
+        //}
 
         // ================= CREATE =================
         [HttpPost]
