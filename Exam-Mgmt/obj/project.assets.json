@@ -2181,7 +2181,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+      "message": "Problem reading the cache file C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\obj\\project.nuget.cache : '\"' is invalid after a value. Expected either ',', '}', or ']'. Path: $.expectedPackageFiles[40] | LineNumber: 47 | BytePositionInLine: 4."
     }
   ]
 }
