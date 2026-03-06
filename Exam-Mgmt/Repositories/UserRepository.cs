@@ -6,31 +6,42 @@ namespace Exam_Mgmt.Repositories
 {
     public class UserRepository
     {
-        private readonly string connectionString =
-            "Server=WINDOWS-H9I7U7H\\SQLEXPRESS01;Database=Student_Management_System;User Id=sa;Password=bethlehem;TrustServerCertificate=True;";
-
         public string RegisterUser(UserModel user)
         {
             string message = "";
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            try
             {
-                SqlCommand cmd = new SqlCommand("RegisterUser", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@Name", user.Name);
-                cmd.Parameters.AddWithValue("@Username", user.Username);
-                cmd.Parameters.AddWithValue("@Password", user.Password);
-                cmd.Parameters.AddWithValue("@ConfirmPassword", user.ConfirmPassword);
-
-                con.Open();
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlConnection con = new SqlConnection(/* your existing connection string */))
+                using (SqlCommand cmd = new SqlCommand("RegisterUser", con))
                 {
-                    message = reader["Message"].ToString();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters with explicit SqlDbType (optional but safer)
+                    cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 100).Value = user.Name;
+                    cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 50).Value = user.Username;
+                    cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 50).Value = user.Password;
+                    cmd.Parameters.Add("@ConfirmPassword", SqlDbType.NVarChar, 50).Value = user.ConfirmPassword;
+
+                    con.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            message = reader["Message"].ToString();
+                        }
+                    }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log exception if needed
+                message = "Database error: " + ex.Message;
+            }
+            catch (Exception ex)
+            {
+                message = "Error: " + ex.Message;
             }
 
             return message;
