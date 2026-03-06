@@ -2,7 +2,10 @@ using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi.Models;
-//using Microsoft.OpenApi.Models;
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Exam_Mgmt
 {
@@ -12,25 +15,31 @@ namespace Exam_Mgmt
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services
             builder.Services.AddControllers();
+
             builder.Services.AddAuthorization();
+
             builder.Services.AddAuthentication(options =>
             {
-                options.DefaultAuthenticateSchema = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationSchema;
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-                .AddJwtBearer(options =>
+            .AddJwtBearer(options =>
             {
-                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"]))
+                    IssuerSigningKey =
+                        new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"])
+                        )
                 };
             });
+
             builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll",
@@ -40,6 +49,7 @@ namespace Exam_Mgmt
                               .AllowAnyHeader()
                               .AllowAnyMethod();
                     });
+
                 options.AddPolicy("AllowReactApp",
                     policy =>
                     {
@@ -58,46 +68,33 @@ namespace Exam_Mgmt
                 });
             });
 
+            // Services
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
-            //<<<<<<< HEAD
-
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
             builder.Services.AddScoped<Top3RankDAL>();
-
-            //=======
-            builder.Services.AddScoped<CourseMasterService, CourseMasterService>();
-            //>>>>>>> origin/Vishwas
-            //>>>>>>> origin/Shreyash
-            //=======
-            builder.Services.AddScoped<StudentRepository, StudentRepository>();
+            builder.Services.AddScoped<CourseMasterService>();
+            builder.Services.AddScoped<StudentRepository>();
             builder.Services.AddScoped<ICourseMasterService, CourseMasterService>();
-            //<<<<<<< HEAD
-            //>>>>>>> origin/Shreyash
-            //=======
-            builder.Services.AddScoped<SemesterMasterService>();
-
-            //>>>>>>> origin/chaitanya
             builder.Services.AddScoped<SemesterMasterService>();
             builder.Services.AddScoped<ICourseSemMappingService, CourseSemMappingService>();
             builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
-            builder.Services.AddScoped<SubjectMasterService, SubjectMasterService>();
+
             var app = builder.Build();
 
-            // Configure middleware
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();      // This needs AddSwaggerGen()
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Exam Management API v1");
-                });
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
-
             app.UseCors("AllowAll");
+
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();   // IMPORTANT
             app.UseAuthorization();
+
             app.MapControllers();
 
             app.Run();
