@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\exam-mgmt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:exam-mgmt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|c:\\users\\dell\\source\\repos\\exam-management\\exam-mgmt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06BDB40B-9CEA-42EA-AF90-B0E7534586CE}|Exam-Mgmt.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -64,6 +68,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Exam-Mgmt",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+              "RelativeDocumentMoniker": "Exam-Mgmt.csproj",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Exam-Mgmt.csproj",
+              "RelativeToolTip": "Exam-Mgmt.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-06T04:14:14.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Models\\Result.cs",
               "RelativeDocumentMoniker": "Models\\Result.cs",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Create dbo.LoginUser.sql",
               "DocumentMoniker": "2b797782-d955-4f39-8323-e0143c26bbd8MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.LoginUser.sql",
               "ToolTip": "2b797782-d955-4f39-8323-e0143c26bbd8MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.LoginUser.sql",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Create dbo.RegisterUser.sql",
               "DocumentMoniker": "f08755ba-787c-4196-91c5-2795f5a3b129MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.RegisterUser.sql",
               "ToolTip": "f08755ba-787c-4196-91c5-2795f5a3b129MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlProcedure/Create dbo.RegisterUser.sql",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Create dbo.Users.sql",
               "DocumentMoniker": "4e5d1d8d-9d34-4573-8c6a-9a6e6b0dc125MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Users.sql",
               "ToolTip": "4e5d1d8d-9d34-4573-8c6a-9a6e6b0dc125MSSQL__/WINDOWS_H9I7U7H_SQLEXPRESS01/Student_Management_System/sa/SqlTable/Create dbo.Users.sql",
@@ -120,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Exam-Management\\Exam-Mgmt\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
