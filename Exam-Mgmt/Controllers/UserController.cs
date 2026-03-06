@@ -1,18 +1,25 @@
-﻿using Exam_Mgmt.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Exam_Mgmt.Models;
 using Exam_Mgmt.Repositories;
-using Microsoft.AspNetCore.Mvc;
 
-[Route("api/[controller]")]
-[ApiController]
-public class UserController : ControllerBase
+namespace Exam_Mgmt.Controllers
 {
-    UserRepository repo = new UserRepository();
-
-    [HttpPost("register")]
-    public IActionResult Register(UserModel user)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController : ControllerBase
     {
-        var result = repo.RegisterUser(user);
+        private readonly UserRepository _userRepo;
 
-        return Ok(result);
+        public UserController(UserRepository userRepo)
+        {
+            _userRepo = userRepo;
+        }
+
+        [HttpPost("register")]
+        public IActionResult Register(UserModel user)
+        {
+            var result = _userRepo.RegisterUser(user);
+            return Ok(result);
+        }
     }
 }
