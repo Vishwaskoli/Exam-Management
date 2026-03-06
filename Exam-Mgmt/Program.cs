@@ -44,6 +44,7 @@ namespace Exam_Mgmt
 
             builder.Services.AddScoped<SubjectMasterService>();
             builder.Services.AddScoped<SubjectSemMappingService>();
+            builder.Services.AddScoped<UserRepository>();
             //<<<<<<< HEAD
 
             builder.Services.AddScoped<IExamMasterService, ExamMasterService>();
