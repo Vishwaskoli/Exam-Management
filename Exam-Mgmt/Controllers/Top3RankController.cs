@@ -6,7 +6,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AuthFilter]
+    //[AuthFilter]
     public class Top3RankController : ControllerBase
     {
         private readonly Top3RankDAL _dal;

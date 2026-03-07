@@ -9,7 +9,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AuthFilter]
+    //[AuthFilter]
     public class SemesterMasterController : ControllerBase
     {
         private readonly ISemesterRepository _repo;

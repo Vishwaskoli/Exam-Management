@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Exam_Mgmt.Controllers
 {
-    [AuthFilter]
+    //[AuthFilter]
     [ApiController]
     [Route("api/[controller]")]
     public class CourseSemMappingController : ControllerBase

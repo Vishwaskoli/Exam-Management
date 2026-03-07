@@ -40,7 +40,7 @@ namespace Exam_Mgmt.Repositories
             return message;
         }
         // LOGIN METHOD
-        public string LoginUser(UserModel user)
+        public string LoginUser(LoginModel user)
         {
             string message = "";
 

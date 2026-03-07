@@ -7,7 +7,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AuthFilter]
+    //[AuthFilter]
     public class StudentController : ControllerBase
     {
         private readonly StudentRepository _repository;

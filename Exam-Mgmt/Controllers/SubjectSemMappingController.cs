@@ -10,7 +10,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AuthFilter]
+    //[AuthFilter]
     public class SubjectSemMappingController : ControllerBase
     {
         private readonly SubjectSemMappingService _service;

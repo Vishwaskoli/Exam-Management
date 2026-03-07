@@ -2,6 +2,9 @@ using Exam_Mgmt.DAL;
 using Exam_Mgmt.Repositories;
 using Exam_Mgmt.Services;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Exam_Mgmt
 {
@@ -10,35 +13,53 @@ namespace Exam_Mgmt
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var key = "THIS_IS_SECRET_KEY_FOR_JWT_TOKEN";
 
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(key))
+    };
+});
+
+            // Controllers
             builder.Services.AddControllers();
+
+            // Authorization
             builder.Services.AddAuthorization();
 
+            // Swagger
             builder.Services.AddEndpointsApiExplorer();
-
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll", policy =>
-                {
-                    policy.AllowAnyOrigin()
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
-                });
-
-                options.AddPolicy("AllowReactApp", policy =>
-                {
-                    policy.WithOrigins("http://localhost:5173")
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
-                });
-            });
-
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "Exam Management API",
                     Version = "v1"
+                });
+            });
+
+            // CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("ReactPolicy", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
                 });
             });
 
@@ -63,10 +84,12 @@ namespace Exam_Mgmt
                 app.UseSwaggerUI();
             }
 
-            app.UseCors("AllowAll");
-
             app.UseHttpsRedirection();
 
+            // Enable CORS
+            app.UseCors("ReactPolicy");
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

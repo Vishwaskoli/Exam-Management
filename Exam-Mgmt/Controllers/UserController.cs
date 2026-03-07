@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Exam_Mgmt.Models;
 using Exam_Mgmt.Repositories;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Exam_Mgmt.Controllers
 {
@@ -24,6 +28,10 @@ namespace Exam_Mgmt.Controllers
         [HttpGet("check")]
         public IActionResult CheckLogin()
         {
+            //foreach (var cookie in Request.Cookies)
+            //{
+            //    Console.WriteLine($"{cookie.Key} : {cookie.Value}");
+            //}
             var username = Request.Cookies["username"];
 
             if (string.IsNullOrEmpty(username))
@@ -31,22 +39,49 @@ namespace Exam_Mgmt.Controllers
 
             return Ok(new { username });
         }
+        [HttpGet("profile")]
+        public IActionResult GetProfile()
+        {
+            var username = Request.Cookies["username"];
+
+            if (username == null)
+                return Unauthorized("Not logged in");
+
+            return Ok($"Welcome {username}");
+        }
         // LOGIN API
         [HttpPost("login")]
-        public IActionResult Login(UserModel user)
+        public IActionResult Login(LoginModel user)
         {
             var result = _userRepo.LoginUser(user);
 
-            if (result == "Login Successful")
-            {
-                Response.Cookies.Append("username", user.Username, new CookieOptions
-                {
-                    HttpOnly = true,
-                    Expires = DateTime.Now.AddHours(2)
-                });
-            }
+            if (result != "Login Successful")
+                return Unauthorized(result);
 
-            return Ok(result);
+            var claims = new[]
+            {
+        new Claim(ClaimTypes.Name, user.Username)
+    };
+
+            var key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes("THIS_IS_SECRET_KEY_FOR_JWT_TOKEN"));
+
+            var creds = new SigningCredentials(
+                key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.Now.AddHours(2),
+                signingCredentials: creds
+            );
+
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return Ok(new
+            {
+                message = "Login Successful",
+                token = jwt
+            });
         }
 
         // LOGOUT API

@@ -8,7 +8,7 @@ namespace Exam_Mgmt.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AuthFilter]
+    //[AuthFilter]
     public class ResultMasterController : ControllerBase
     {
         private readonly string _connectionString;
